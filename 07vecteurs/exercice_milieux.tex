@@ -1,0 +1,46 @@
+\documentclass[14pt, aspectratio=43]{beamer}
+
+\usepackage{pablo-beamer}
+
+\institute{Lycée Marie Curie}
+\date{2015}
+\logo{}
+\title{Milieu et Relation de Chasles}
+
+\begin{document}
+
+
+\begin{frame}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      Soient $A$, $B$ et $C$ trois points distincts, et $I$ et $J$ les milieux respectifs de $\left[ AB \right]$ et $\left[ BC \right]$. Le but de l'exercice est de trouver une relation entre $\vecteur{IJ}$ et $\vecteur{AC}$.
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{center}
+        \begin{tikzpicture}[very thick, scale=1.2]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (3,1);
+          \coordinate (C) at (4,-1);
+          \coordinate (I) at ($.5*(A)+.5*(B)$);
+          \coordinate (J) at ($.5*(C)+.5*(B)$);
+
+          \draw (A) node[left]{$A$}
+          -- (B) node[above]{$B$}
+          -- (C) node[right]{$C$};
+          \draw[dashed,-latex] (I) node[above left]{$I$}
+          -- (J) node[above right]{$J$};
+          \draw[dashed, -latex] (A) -- (C);
+        \end{tikzpicture}
+      \end{center}
+    \end{column}
+  \end{columns}
+
+  \begin{enumerate}
+    \item Avec la relation de Chasles, décomposer $\vecteur{IJ}$ avec le vecteur $B$.
+    \item Quelle est la relation entre $\vecteur{AI}$ et $\vecteur{IB}$ ? En déduire la relation entre $\vecteur{AB}$ et $\vecteur{IB}$.
+    \item De même, montrer que $\vecteur{BJ}=\frac{1}{2}\vecteur{BC}$.
+    \item Bilan : Montrer que $\vecteur{IJ}=\frac{1}{2}\vecteur{AC}$.
+  \end{enumerate}
+
+\end{frame}
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+
+\usepackage[a5paper,landscape,margin=1cm]{geometry}
+\pagestyle{empty}
+
+\begin{document}
+
+\vspace*{\stretch{1}}
+
+  \begin{center}
+    \begin{tikzpicture}[very thick,scale=1.5]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (1,1);
+      \coordinate (C) at (2,-1);
+      \coordinate (D) at (-1,1.5);
+      \coordinate (E) at (3,2);
+      \coordinate (F) at (-2,-1);
+      \coordinate (G) at ($(B)+2*(E)-2*(D)$);
+      \coordinate (H) at ($(C)+3*(A)-3*(F)$);
+      \coordinate (I) at ($(E)+.5*(C)-.5*(D)$);
+      \coordinate (J) at ($(C)+(E)-(C)+(B)-(D)$);
+      \coordinate (K) at ($(F)+(E)-(D)+(B)-(A)$);
+      \coordinate (L) at ($(A)+.5*(E)-.5*(C)+2*(C)-2*(F)$);
+      \coordinate (M) at ($(C)+3*(A)-3*(F)-(E)+(D)$);
+      \coordinate (N) at ($(C)+(E)-(F)+(C)-(A)$);
+      \draw (A) node{$\times$} node[below left]{$A$};
+      \draw (B) node{$\times$} node[above right]{$B$};
+      \draw (C) node{$\times$} node[below]{$C$};
+      \draw (D) node{$\times$} node[above left]{$D$};
+      \draw (E) node{$\times$} node[above left]{$E$};
+      \draw (F) node{$\times$} node[below left]{$F$};
+      \draw (G) node{$\bullet$};% node[below]{$G$};
+      \draw (H) node{$\bullet$};% node[below]{$H$};
+      \draw (I) node{$\bullet$};% node[below]{$I$};
+      \draw (J) node{$\bullet$};% node[below]{$J$};
+      \draw (K) node{$\bullet$};% node[below]{$K$};
+      \draw (L) node{$\bullet$};% node[below]{$L$};
+      \draw (M) node{$\bullet$};% node[below]{$M$};
+      \draw (N) node{$\bullet$};% node[below]{$N$};
+    \end{tikzpicture}
+  \end{center}
+
+\vspace*{\stretch{1}}
+
+  Placer les points suivants :
+  \begin{multicols}{2}
+  \begin{description}
+    \item[$G$] tel que $\vecteur{BG}=2\vecteur{DE}$ ;
+    \item[$H$] tel que $\vecteur{CH}=3\vecteur{FA}$ ;
+    \item[$I$] tel que $\vecteur{IE}=\frac{1}{2}\vecteur{CD}$ ;
+    \item[$J$] tel que $\vecteur{CJ}=\vecteur{CE}+\vecteur{DB}$ ;
+    \item[$K$] tel que $\vecteur{KF}=\vecteur{ED}+\vecteur{BA}$ ;
+    \item[$L$] tel que $\vecteur{AL}=\frac{1}{2}\vecteur{CE}+2\vecteur{FC}$ ;
+    \item[$M$] tel que $\vecteur{CM}=3\vecteur{FA}-\vecteur{DE}$ ;
+    \item[$N$] tel que $\vecteur{CN}=\vecteur{FE}-\vecteur{CA}$ ;
+  \end{description}
+\end{multicols}
+
+\end{document}

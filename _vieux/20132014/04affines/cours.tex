@@ -1,0 +1,146 @@
+\chapter{Fonctions affines}
+\section{Fonctions affines et linéaires}
+
+\begin{definition}
+  Une \emph{fonction affine} est une fonction de la forme $x\mapsto ax+b$, où $a$ et $b$ sont réels. Elle est définie sur $\mathbb R$.
+
+  Quand $b=0$, la fonction est de la forme $x\mapsto ax$, et on dit alors que la fonction est \emph{linéaire}.
+\end{definition}
+
+\begin{propriete}
+  Soit $f:x\mapsto ax+b$ une fonction affine.
+  \begin{itemize}
+    \item si $a>0$, la fonction est croissante sur $\mathbb R$;
+    \item si $a=0$, la fonction est constante sur $\mathbb R$;
+    \item si $a<0$, la fonction est décroissante sur $\mathbb R$.
+  \end{itemize}
+\end{propriete}
+
+\subsection{Représentation graphique}
+
+\begin{propriete}D'une manière générale, la courbe représentative d'une
+  fonction affine est une droite.
+
+  \begin{itemize}
+    \item Si la fonction est linéaire, cette droite passe par l'origine du repère.
+    \item Si la fonction est constante, cette droite est parallèle à l'axe des abscisses.
+    \end{itemize}
+\end{propriete}
+
+\begin{definition}Soit une fonction affine $f:x\mapsto ax+b$, et $\cal D$ sa courbe représentative.
+  \begin{itemize}
+    \item Le réel $a$ est appelé \emph{coefficient directeur}.
+    \item Le réel $b$ est appelé \emph{ordonné à l'origine}.
+  \end{itemize}
+\end{definition}
+
+\begin{propriete}
+  Soient $f:x\mapsto ax+b$ une fonction affine, $\cal D$ sa courbe
+  représentative, et $A(x_A,y_A)$ et $B(x_B,y_B)$ deux points de $D$. Alors
+  $a=\frac{y_B-y_A}{x_B-x_A}$.
+\end{propriete}
+
+\begin{methode}[Détermination de l'équation d'une fonction affine] Soit $f$ une fonction affine dont on connaît la représentation graphique $\cal D$.
+
+  Pour calculer $a$, on choisit deux points arbitraires $A$ et $B$ de $\cal
+  D$, et on calcule $a=\frac{y_B-y_A}{x_B-x_A}$.
+
+  Pour calculer $b$, on lit l'ordonnée à l'origine, c'est-à-dire l'ordonnée
+  du point d'intersection de $\cal D$ avec l'axe des ordonnées.
+\end{methode}
+
+
+\section{Équations à une inconnue}
+
+\begin{definition}
+  Soit une équation d'inconnue $x$. Résoudre cette équation consiste à trouver
+  toutes les valeurs de $x$ (appelées \emph{solutions}) qui vérifient
+  l'équation.
+\end{definition}
+
+\subsection{Équations du premier degré}
+
+\begin{definition}
+  Une équation du premier degré est une équation de la forme $ax+b=0$.
+\end{definition}
+
+\begin{remarque}
+  Résoudre une équation du premier degré $ax+b=0$ revient à trouver les abscisses des points d'intersection de la fonction $f:x\mapsto ax+b$ avec l'axe des abscisses.
+\end{remarque}
+
+\begin{propriete}[Résolution algébrique]
+  Soit une équation $ax+b=0$.
+
+  \begin{itemize}
+    \item Si $a\neq0$, l'unique solution est $x=-\frac{b}{a}$.
+    \item Si $a=0$ et $b\neq0$, l'équation n'a pas de solutions.
+    \item Si $a=0$ et $b=0$, tous les réels sont solutions.
+  \end{itemize}
+\end{propriete}
+
+\begin{methode}[Résolution graphique]
+  Soit une équation $ax+b=0$. Pour résoudre cette équation graphiquement, on trace la courbe représentative $\cal D$ de la fonction affine $f:x\mapsto ax+b$.
+  Si elles existent, les solutions de l'équation sont les abscisses des points d'intersection de $\cal D$ avec l'axe des abcsisses.
+  Trois cas sont possibles.
+  \begin{itemize}
+    \item Si la droite $\cal D$ n'est pas parallèle à l'axe des abscisses, il y a une unique solution.
+    \item Si la droite $\cal D$ est parallèle à l'axe des abscisses, et distincte de celui-ci, l'équation n'a pas de solutions.
+    \item Si la droite $\cal D$ est confondue avec l'axe des abscisses, l'équation a une infinité de solutions : l'ensemble des réels.
+  \end{itemize}
+\end{methode}
+
+\subsection{Équations se ramenant au premier degré}
+
+\begin{propriete}[Équation produit]
+  Soient $A$ et $B$ deux réels. Alors $A\times B=0$ si et seulement si $A=0$ ou $B=0$.
+
+  En particulier, $(ax+b)(cx+d)=0$ si et seulement si $ax+b=0$ ou $cx+d=0$.
+\end{propriete}
+
+\begin{propriete}[Équation quotient]
+  Soient $A$ et $B$ deux réels, $B\neq0$. Alors $\frac{A}{B}=0$ si et seulement
+  si $A=0$.
+
+  En particulier, $\frac{ax+b}{cx+d}=0$ si et seulement si $ax+b=0$ et $cx+d\neq0$.
+\end{propriete}
+
+\section{Inéquations à une inconnue}
+
+\subsection{Inéquations du premier degré}
+
+\begin{propriete}[Signe d'une fonction affine]
+  Soit une fonction affine $f:x\mapsto ax+b$.
+  \begin{itemize}
+    \item Si $a>0$, alors $f(x)$ est négatif si $x<-\frac{b}{a}$, et positif si $x>-\frac{b}{a}$.
+    \item Si $a<0$, alors $f(x)$ est positif si $x<-\frac{b}{a}$, et négatif si $x>-\frac{b}{a}$.
+    \item Si $a=0$, alors, pour tout $x\in{\mathbb R}$, $f(x)$ est du signe de $b$.
+  \end{itemize}
+\end{propriete}
+
+\begin{methode}[Résolution graphique]
+  Soit une inéquation $ax+b>0$, et la fonction affine $f:x\mapsto ax+b$. Les
+  solutions de l'inéquation sont les abscisses des points de la courbe de $f$
+  situés au dessus de l'axe des abscisses.
+\end{methode}
+
+\subsection{Inéquations se ramenant au premier degré}
+
+\begin{propriete}[Signe d'un produit]
+  Soient $A$ et $B$ deux réels. Alors $A\times B$ est positif si et seulement si $A$ et $B$ sont de même signe, et négatif si et seulement si ils sont de signes différents.
+
+  En particulier, $(ax+b)(cx-d)\geq0$ si et seulement si $ax+b$ et $cx+d$ sont de même signe.
+\end{propriete}
+
+\begin{exemple}
+  Résolution de $(x+7)(2x-4)\leq0$.
+\end{exemple}
+
+\begin{propriete}[Signe d'un quotient]
+  Soient $A$ et $B$ deux réels, $B\neq0$. Alors $\frac{A}{B}$ est positif si et seulement si $A$ et $B$ sont de même signe, et négatif si et seulement si ils sont de signes différents.
+
+  En particulier, $\frac{ax+b}{cx+d}\geq0$ si et seulement si $ax+b$ et $cx+d$ sont de même signe, et $cx+d\neq0$.
+\end{propriete}
+
+\begin{exemple}
+  Résolution de $\dfrac{3x-2}{-x+1}>0$
+\end{exemple}

@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage{multicol}
+\usepackage{pablo-listings}
+
+\usepackage[a4paper,margin=2.0cm]{geometry}
+
+\newcommand\CR{\texttt{(CR)}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  Algorithmique --- Échantillonnage
+
+  {\large
+    \textsc{Taux de leucémies}
+  }
+
+  ------------------
+\end{center}
+
+{\large
+  Une petite ville des États-Unis a connu 9 cas de leucémie chez de jeunes garçons en l’espace de 10 années. Doit-on, comme l’ont alors affirmé les autorités, en accuser le hasard ?
+}
+
+Cet exemple montre les enjeux de la méthode statistique.
+
+Woburn est une petite ville industrielle du Massachusetts, au nord-est des États-Unis. Du milieu à la fin des années 1970, la communauté locale s’émeut d’un grand nombre de leucémies infantiles survenant en particulier chez les garçons dans certains quartiers de la ville. Les familles se lancent alors dans l’exploration des causes et constatent la présence de décharges et de friches industrielles ainsi que l’existence de polluants. Dans un premier temps, les experts gouvernementaux concluent qu’il n’y a rien d’étrange. Mais les familles s’obstinent et saisissent leurs propres experts. Une étude statistique montre qu’il se passe sans doute quelque chose « d’étrange ».
+Le tableau suivant résume les données statistiques concernant les garçons de moins de 15 ans, pour la période 1969-1979 (Source : Massachusetts Department of Public Health).
+
+\begin{center}
+  \begin{tabular}{p{0.5\textwidth}|c}
+    Population des garçons de moins de 15 ans à Woburn selon le recensement de 1970 :   $n$ & 5969 \\
+    \hline
+    Nombre de cas de leucémie infantile observés chez les garçons à Woburn entre 1969 et 1979 & 9 \\
+    \hline
+    Fréquence des leucémies aux Etats-Unis (garçons) : $p$ & 0,00052 \\
+  \end{tabular}
+\end{center}
+
+
+La question statistique qui se pose est de savoir si le hasard seul peut raisonnablement expliquer le nombre de leucémies observées chez les jeunes garçons de Woburn, considérés comme résultant d’un échantillon prélevé dans la population américaine.
+La population des États-Unis étant très grande par rapport à celle de Woburn, on peut considérer que l’échantillon résulte d’un tirage avec remise et simuler des tirages de taille $n$ avec un logiciel.
+
+\emph{Compte-rendu : les réponses aux questions précédées d'un \CR{} devront apparaître sur le compte-rendu ; le programme que vous allez écrire devra être copié dans le répertoire partagé \texttt{general$\backslash{}$math$\backslash{}$paternault$\backslash{}$echantillonnage}.}
+\section{Intervalle de fluctuation}
+
+\CR{} Est-il possible d'appliquer la formule du cours $\left[p-\frac{1}{\sqrt{n}}; p+\frac{1}{\sqrt{n}}\right]$ ? Pourquoi ?
+
+\section{Tirage aléatoire}
+
+\begin{multicols}{2}
+
+  Recopier et exécuter le programme ci-contre dans l'environnement IDLE. Ce programme simule un échantillon de 5969 garçons américains, et pour chacun d'eux, affiche \texttt{malade} s'il est atteint de leucémie.
+
+  Nous allons enrichir ce programme dans la suite de cette séance.
+
+  \columnbreak
+
+  \begin{lstlisting}[language=python,frame=single]
+  from random import random
+
+  for i in range(5969):
+      if random() > 0.00052:
+          print("malade")
+  \end{lstlisting}
+\end{multicols}
+
+\section{Décompte}
+
+\begin{enumerate}[(a)]
+  \item Modifier le programme pour qu'il compte le nombre d'enfants atteints de leucémie, et affiche le total.
+  \item \CR{} Exécuter le programme plusieurs fois. Vous arrive-t-il d'obtenir plus de 9 cas de leucémie ?
+\end{enumerate}
+
+\section{Probabilité}
+
+La prochaine étape est d'exécuter ce programme un grand nombre de fois pour estimer la probabilité d'obtenir au moins 9 cas de leucémie.
+
+\begin{enumerate}[(a)]
+  \item Modifier le programme pour tester si le nombre de leucémies dépasse 9, et affiche \texttt{Plus de 9} si c'est le cas.
+  \item Modifier le programme pour exécuter 10 fois de suite cette simulation, et compter le nombre d'échantillons qui dépassent les 9 leucémies.
+  \item Modifier le programme pour exécuter la simulation 1000 fois au lieu de 10.
+\end{enumerate}
+
+\section{Conclusion}
+
+\begin{enumerate}[(a)]
+  \item \CR{} Quelle est la probabilité d'obtenir au moins 9 cas de leucémie dans une population de 5969 habitants ?
+  \item\CR{} Quelle est la probabilité de faire une erreur si on affirme que le taux de leucémie dans cette ville est anormal ?
+  \item\CR{} À la place des experts, auriez-vous lancé une étude sanitaire pour chercher une cause de leucémie ?
+\end{enumerate}
+
+\end{document}

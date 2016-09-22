@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exercice}{Exercice}
+
+\usepackage{tikz}
+\usepackage{multicol}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\setcounter{exercice}{3}
+\begin{exercice}~
+
+\begin{enumerate}
+  \item Résoudre les inéquations suivantes, et donner les solutions à l'aide d'intervalles.
+    \begin{multicols}{2}
+      \begin{enumerate}
+        \item $3<x+7$
+        \item $2x-4\geq6$
+        \item $3(x+2)\leq x-1$
+        \item $3(x+2)\leq x-1$ et $3<x+7$
+        \item $3(x+2)\leq x-1$ ou $2x-4\geq6$
+        \item $3<x+7$ ou $2x-4\geq6$
+      \end{enumerate}
+    \end{multicols}
+
+  \item Répondre par vrai ou faux après avoir résolu l'équation.
+    \begin{enumerate}
+      \item La solution de $\dfrac{2x-1}{5}=\dfrac{x+1}{7}$ est un nombre décimal.
+      \item La solution de $x-\dfrac{3-x}{2}=1$ est un nombre entier naturel.
+    \end{enumerate}
+
+  \item Est-il possible de construire la figure suivante, où :
+      $ABCD$ et $AEFG$ sont des carrés ;
+      $AE=x$ ;
+      $CD=2x+6$ ;
+      $BE = 2$ ?
+    Justifiez votre réponse.
+
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0,0) node[below left]{$A$}
+          -- (0,3) node[above left]{$B$}
+          -- (3,3) node[above right]{$C$}
+          -- (3,0) node[below right]{$D$}
+          -- cycle;
+
+        \draw (0,1) node[left]{$E$}
+          -- (1,1) node[above right]{$F$}
+          -- (1,0) node[below]{$G$};
+      \end{tikzpicture}
+    \end{center}
+
+  \item Pour organiser le devoir commun de secondes, les professeurs de
+    mathématiques doivent répartir les élèves dans des salles de classe
+    identiques. S'ils utilisent dix salles, il y aura neuf places libres dans
+    chaque salle. S'ils utilisaient cinq salles, il manquerait 95 places.
+
+    On appelle $s$ le nombre de places des salles, et $n$ le nombre total d'élèves.
+
+    Quelle est le nombre de places des salles ?
+
+\end{enumerate}
+\end{exercice}
+
+\end{document}

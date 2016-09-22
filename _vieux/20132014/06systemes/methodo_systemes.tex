@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage[a5paper,margin=1.1cm]{geometry}
+\pagestyle{empty}
+
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+\begin{document}
+\begin{center}
+  \textsc{Méthodologie}
+
+{\Large
+  Résolution de systèmes 
+  de deux équations
+  
+  linéaires
+à deux inconnues
+}
+\end{center}
+
+\setcounter{subsubsection}{-1}
+\subsubsection{Par résolution graphique}
+\begin{compactenum}
+\item Tracer les droites correspondant aux deux équations.
+\item Lire les solutions sur le graphique (ce sont les points d'intersection des droites).
+\item Dans le cas d'une solution unique, vérifier si c'est une solution exacte
+  en remplaçant dans le système les inconnues par les valeurs trouvées.
+\end{compactenum}
+
+\subsubsection{Par substitution}
+\begin{compactenum}
+\item Isoler une inconnue (par exemple $x=\ldots$) dans une des équations.
+\item Remplacer dans la deuxième équation l'inconnue $x$ par l'expression trouvée.
+\item Résoudre cette deuxième équation pour trouver la valeur de $y$.
+\item Utiliser cette valeur dans la première équation pour trouver $x$.
+\end{compactenum}
+
+\subsubsection{Par combinaison linéaire}
+Nous nommons les équations $L_1$ et $L_2$.
+
+Les opérations suivantes ne modifient pas les solutions d'un système.
+  \begin{compactitem}
+  \item $L_1 \leftrightarrow L_2$ : Permuter deux équations.
+  \item $L_1 \rightarrow \alpha \times L_1$ : Multiplier les deux membres d'une équation par le même nombre non nul.
+  \item $L_1 \rightarrow L_1 + L_2$ : Remplacer une équation par la somme de cette même équation avec une autre.
+  \item \textit{Substitution} : Substituer dans une équation une inconnue par son expression exprimée dans une autre équation.
+  \end{compactitem}
+  La méthode consiste, en utilisant les opérations citées ci-dessus, à \og{}faire disparaitre\fg{} dans une équation toutes les inconnues sauf une, pour trouver sa valeur, et calculer la seconde inconnue par substitution.
+\end{document}

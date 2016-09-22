@@ -1,0 +1,145 @@
+\section{Vocabulaire}
+
+TODO
+
+\begin{itemize}
+  \item Population, individu
+  \item Caractère, qualitatif ou quantitatif, discret ou continu
+  \item classe, intervalle, étendue
+  \item Effectif total, d'une valeur
+  \item Fréquence, effectifs cumulés croissants,fréquences cumulées croissantes
+\end{itemize}
+
+\section{Représentations graphiques}
+
+\subsection{Histogramme}
+
+TODO Description, exemple.
+
+\subsection{Nuage de points}
+
+TODO Description, exemple.
+
+\subsection{Courbe des effectifs cumulés}
+
+TODO Description, exemple.
+
+\subsection{Diagramme circulaire}
+
+TODO Description, exemple.
+
+
+\section{Indicateurs d'une série statistique}
+
+\subsection{Définitions}
+
+\begin{definition}[Moyenne]
+  La \emph{moyenne} d'une série de caractères $x_1, x_2, \ldots x_k$ et d'effectifs $n_1, n_2 \ldots n_k$ est la valeur notée $\bar x$ valant :
+  \[{\bar x}=\dfrac{n_1x_1+n_2x_2+\ldots+n_kx_k}{n_1+n_2+\ldots+n_k}.\]
+\end{definition}
+
+\begin{definition}[Médiane]
+  La \emph{médiane} d'une série est une valeur $m$ telle que la moitié des effectifs étudiés ait une valeur inférieure ou égale à $m$, et l'autre moité ait une valeur supérieure ou égale.
+\end{definition}
+
+\begin{remarque}
+  La moyenne et la médiane sont des indicateurs de \emph{position}.
+\end{remarque}
+
+\begin{definition}[Quartiles]~
+  \begin{itemize}
+    \item Le \emph{premier quartile} d'une série est la plus petite valeur telle qu'au moins $25\%$ des valeurs lui soit inférieure ou égale.
+    \item Le \emph{troisième quartile} d'une série est la plus petite valeur telle qu'au moins $75\%$ des valeurs lui soit inférieure ou égale.
+  \end{itemize}
+\end{definition}
+
+\begin{remarque}
+  Les quartiles sont des indicateurs de \emph{dispersion}
+\end{remarque}
+
+\subsection{Méthodes}
+\subsubsection{Calcul de la médiane}
+On commence par trier les caractères par ordre croissant.
+\begin{itemize}
+  \item Si la série étudiée a un effectif $N$ impair, la médiane est la valeur du caractère numéroté $\frac{N+1}{2}$.
+  \item Si la série étudiée a un effectif $N$ pair, la médiane est la moyenne des caractères numérotés $\frac{N}{2}$ et $\frac{N}{2}+1$.
+\end{itemize}
+
+\subsubsection{Calcul des quartiles}
+
+On trie les effectifs par ordre croissant, et on applique la définition.
+
+\begin{exemple}
+Calculer la médiane et les quartiles des salaires des entreprises A et B.
+
+  A :
+  \begin{tabular}{r|c|c|c|c|c|c|c}
+    Salaire  & 1450 & 1500 & 1550 & 1600 & 1650 & 1700 & 1750 \\
+    \hline
+    Effectif & 5    &  2   &  5   &  7   &  3   &  6   & 7    \\
+  \end{tabular}
+
+  B :
+  \begin{tabular}{r|c|c|c|c|c|c|c}
+    Salaire  & 1450 & 1460 & 1470 & 1580 & 1600 & 2000 & 5000 \\
+    \hline
+    Effectif & 8    &  2   & 15   &  2   &  5   &  2   & 1    \\
+  \end{tabular}
+\end{exemple}
+
+\subsection{Quel indicateur choisir ?}
+
+TODO
+
+\begin{itemize}
+  \item Sensibilité aux extrèmes
+  \item Longue traîne
+\end{itemize}
+
+\section{Échantillon}
+
+\begin{activite}
+  Je lance 30 fois une pièce de monnaie, et j'obtiens 8 fois Pile et 22 fois Face. Je me demande si cette pièce est équilibrée ou non.
+
+  Proposer une réponse, ou une méthode pour répondre à cette question.
+\end{activite}
+
+
+\begin{definition}
+  On appelle \emph{échantillon de taille $n$} les résultats de $n$ répétitions indépendantes d'une même expérience aléatoire.
+\end{definition}
+
+\begin{exemple}~
+  \begin{itemize}
+    \item Pour évaluer la qualité des produits à la sortie d'une usine, on en prélève 100 au hasard, et pour chacun d'entre eux, on détermine s'il est considéré défectueux ou non.
+    \item Pour tenter de deviner les résultats d'une élection, on prélève au hasard 1000 personnes dans la population, et on leur demande quelle est leur intention de vote.
+  \end{itemize}
+\end{exemple}
+
+\section{Intervalle de fluctuation}
+
+\begin{activite}
+  J'affirme que 95 fois sur 100, si on lance 30 fois de suite une pièce de monnaie équilibrée, on obtient entre 10 et 20 fois Pile (inclus).
+
+  Étant donné cette nouvelle information, que peut-on dire d'une pièce qui a donné 8 pile en 30 lancers ?
+\end{activite}
+
+\begin{definition}
+  L'\emph{intervalle de fluctuation} au seuil de 95\%, relatif aux
+  échantillons de taille $n$, est l’intervalle centré autour de $p$,
+  proportion du caractère dans la population, où se situe, avec une
+  probabilité égale à $0,95$, la fréquence observée.
+\end{definition}
+
+\begin{propriete}
+  Pour un échantillon de taille $n\geq25$, et une proportion $p$ du
+  caractère appartenant à $[0,2;0,8]$, la fréquence observée d'apparition du caractère dans l'échantillon appartient à l'intervalle $\left[p-\frac{1}{\sqrt{n}};p+\frac{1}{\sqrt{n}}\right]$ avec une probabilité d'au moins $0,95$.
+\end{propriete}
+
+\begin{exemple}[Estimation d'une proportion inconnue]
+  TODO
+\end{exemple}
+
+\begin{exemple}[Prise de décision]
+  TODO
+\end{exemple}

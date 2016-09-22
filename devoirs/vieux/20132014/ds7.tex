@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+
+\usepackage{pablo}
+\usepackage{pablo-listings}
+\usepackage[a5paper,margin=2cm]{geometry}
+\usepackage{eurosym}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  Devoir surveillé --- 1h
+
+  \textsc{Systèmes et Droites}
+\end{center}
+Nom : \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots
+
+\begin{exercice}[Équations de droites --- 5,5 points] \emph{Les lectures graphiques doivent apparaître clairement sur les graphiques. Les résultats seront donnés par des valeurs exactes.} 
+ 
+  \begin{center}
+\begin{tikzpicture}[scale=0.8]
+\shorthandoff{:}
+    % Quadrillage
+    \draw[color=black,step=1,dotted] (-5.5,-5.5) grid (7.5,4.5);
+
+    % Repère
+    \draw (-5.25,0) -- (7,0);
+    \draw[thick,->] (0,0) -> (1,0) node[midway,below] {$\vecteur\imath$};
+    \draw (0,-5.25) -- (0,4);
+    \draw[thick,->] (0,0) -> (0,1) node[midway,left] {$\vecteur\jmath$};
+    \draw (0,0) node[below left] {$O$};
+
+%     % Objets
+      \draw[smooth,samples=100,domain=-0.25:4.75] plot(\x,{-2*(\x)+4}) node[right] {$d_1$};
+      \draw[smooth,samples=100,domain=-5.5:7.5] plot(\x,{1/3*(\x)-5/3}) node[right] {$d_2$};
+      \draw (-3,-5.5) -- (-3,4.5) node[right] {$d_3$} ;
+  \end{tikzpicture}
+\end{center}
+
+\begin{enumerate} 
+ \item Donner les équations des droites $d_1$, $d_2$ et $d_3$. 
+\item Déterminer les coordonnées du point d'intersection de $d_1$ et $d_2$. 
+\item Tracer, sur le graphique précédent,
+les droites d'équations $y = -\frac{1}{2}x+3$ et $x = 6$. 
+\end{enumerate}
+%\begin{center}
+%  \begin{tikzpicture}[scale=0.5]
+%    \shorthandoff{:}
+%    % Quadrillage
+%    \draw[color=black,step=1,dotted] (-5.5,-5.5) grid (7.5,4.5);
+%
+%    % Repère
+%    \draw (-5.25,0) -- (7,0);
+%    \draw[thick,->] (0,0) -> (1,0) node[midway,below] {$\vecteur\imath$};
+%    \draw (0,-5.25) -- (0,4);
+%    \draw[thick,->] (0,0) -> (0,1) node[midway,left] {$\vecteur\jmath$};
+%    \draw (0,0) node[below left] {$O$};
+%
+%    % Solutions
+%    \draw[smooth,samples=100,domain=-3:7.5] plot(\x,{-1/2*(\x)+3});
+%    \draw (6,-5.5) -- (6,4.5);
+%
+%  \end{tikzpicture}
+%\end{center}
+ 
+\end{exercice}
+
+\newpage
+
+\begin{exercice}[Vecteurs et droites --- 6 points]\emph{Les réponses par lecture graphique ne seront pas prises en compte, sauf quand l'énoncé l'autorise explicitement.}
+
+  \begin{center}
+    \begin{tikzpicture}[scale=0.9]
+    % Quadrillage
+    \draw[color=black,step=1,dotted] (-.5,-.2) grid (7.5,4.2);
+
+    % Repère
+    \draw (-.25,0) -- (7,0);
+    \draw[thick,->] (0,0) -> (1,0) node[midway,below] {$\vecteur\imath$};
+    \draw (0,-.25) -- (0,4);
+    \draw[thick,->] (0,0) -> (0,1) node[midway,left] {$\vecteur\jmath$};
+    \draw (0,0) node[below left] {$O$};
+
+    % Objets
+    \draw (1,1) node{$\bullet$}node{$\bullet$}  node[right] {$A$};
+    \draw[color=blue,->] (2,4) -- (6,4) node[midway,below]{$\vecteur{u}$};
+    \draw[color=blue,->] (5,1) -- (1,3) node[midway,above]{$\vecteur{v}$};
+
+    % Solutions
+    %\draw[color=blue,->] (4,1) -- (6,2) node[midway,above]{$\vecteur{w}$};
+    %\draw[color=red,domain=-0.1:7] plot (\x,{\x/2+.5}) node[below left]{$\cal D$};
+  \end{tikzpicture}
+\end{center}
+
+  \begin{enumerate}
+    \item Lire sur le graphique les coordonnées du point $A$ et des vecteurs $\vecteur{u}$ et $\vecteur{v}$.
+    \item Soit le vecteur $\vecteur w$, défini par $\vecteur w=\vecteur u +\frac{1}{2}\vecteur v$. Montrer que les coordonnées de $\vecteur w$ sont $\coord{2}{1}$.
+    \item \begin{enumerate}
+        \item Tracer la droite $\cal D$ de vecteur directeur $\vecteur w$ passant par $A$.
+        \item Le point $B(3,2;2,5)$ appartient-il à la droite $\cal D$ ?
+          Vérifier votre réponse sur le graphique.
+      \end{enumerate}
+    \item \begin{enumerate}
+        \item
+          Que fait l'algorithme suivant ?
+      \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+      Lire x
+      Lire y
+      Si 0,5 * x + 0,5 = y
+      Alors
+        Afficher "Vrai"
+      Sinon
+        Afficher "Faux"
+      FinSi
+      \end{lstlisting}
+    \item On exécute cet algorithme avec $x=3$ et $y=2$. Qu'affiche l'algorithme ? Que peut-on en déduire ?
+  \end{enumerate}
+  \end{enumerate}
+\end{exercice}
+
+\newpage
+
+\begin{exercice}[Système d'équations --- 5 points]\emph{Toutes les questions,
+  sauf la dernière, peuvent être résolues sans avoir résolu les précédentes.}
+  \begin{enumerate}
+    \item Résoudre les systèmes suivants :
+
+      \hspace{\stretch{1}}
+      \begin{inparaenum}
+      \item $\systeme{y=-5-x}{y=\frac{1}{2}x+1}$
+        \hspace{\stretch{1}}
+      \item $\systeme{2y=x}{y=\frac{1}{2}x+1}$
+        \hspace{\stretch{1}}
+      \end{inparaenum}
+      \hspace{\stretch{1}}
+      ~
+
+    \item Le but de la question est de résoudre le système $(S)$ suivant :
+      \[(S)\systeme{x^2+5x-xy-10y-2y^2=0}{y=\frac{1}{2}x+1}\]
+      \begin{enumerate}
+        \item Montrer que $(S)$ est équivalent à :
+
+          \[(S)\systeme{(x-2y)(5+x+y)=0}{y=\frac{1}{2}x+1}\]
+        \item Montrer que $(S)$ est équivalent à :
+
+          \[\systeme{2y=x}{y=\frac{1}{2}x+1} \text{ ou } \systeme{y=-5-x}{y=\frac{1}{2}x+1}\]
+        \item En utilisant la première question, en déduire les solutions de $(S)$.
+      \end{enumerate}
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Problème ouvert --- 3,5 points]\emph{Cet exercice est ouvert ; toute trace de recherche sera valorisée.}
+
+ Deux entreprises A et B emploient deux types de personnel : des cadres et des ouvriers. 
+\begin{itemize} 
+ \item L'entreprise A emploie 5 cadres et 20 ouvriers. Le salaire moyen des cadres est 3020~\officialeuro{} et celui des ouvriers 1750~\officialeuro.
+\item  L'entreprise B emploie 50 personnes. Le salaire moyen des cadres est 2880~\officialeuro{} et celui des ouvriers 1650~\officialeuro.
+\end{itemize}
+ Le directeur financier de l'entreprise B affirme que le salaire moyen pour l'ensemble de ses employés est supérieur à celui de l'entreprise A. Est-ce possible ? 
+\end{exercice}
+
+\end{document}
+

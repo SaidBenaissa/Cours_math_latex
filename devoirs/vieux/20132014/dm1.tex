@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\setlength{\columnsep}{3em}
+
+\usepackage{pablo}
+\usepackage[a5paper,margin=1.5cm]{geometry}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+
+\pagestyle{empty}
+\begin{document}
+
+  \section*{Intervalles et Ensembles de nombres --- DM}
+  \emph{À rendre le vendredi 4 octobre}
+  \setcounter{exercice}{0}
+
+  \begin{exercice}[Équations et ensembles de nombres]
+    Résoudre les équations suivantes, et dire quelle est la nature des solutions.
+    \begin{enumerate}[(a)]
+      \item $-3y+2=y+5$
+      \item $\frac{2+5x}{4} = 3$
+      \item $\frac{a+2}{7}=a$
+      \item $\frac{t\times\sqrt{3}}{9}=\frac{1}{\sqrt{3}}$
+      \item $b\times\sqrt{2}+3=\frac{5b}{\sqrt{2}}$
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}[Intervalles]
+    Compléter le tableau suivant.
+
+    \def\arraystretch{2}%  1 is the default, change whatever you need
+      \begin{tabular}{c|c|c}
+        Inégalité & Intervalle & Barre des réels \\
+        \hline\hline
+    $x\leq0$ & $]-\infty;0]$       & \includegraphics{dm1-intervalle1} \\
+        \hline
+    & $]-\infty;3]$ & \\
+        \hline
+        $x>5 \text{ et } x\leq3$ && \\
+        \hline
+        $x>100$ && \\
+        \hline
+              & $[42; 1729]$&\\
+      \end{tabular}
+  \end{exercice}
+
+  \newpage
+
+  \begin{exercice}[Union et intersection d'intervalles] Représenter les intervalles suivants sur la droite des réels, et en donner une écriture simplifiée si possible (reprendre si nécessaire le cours fait en classe ou le cours du livre, page 28).
+    \begin{framed}
+    \begin{enumerate}[Exemple 1 :]
+      \item $]-\infty; -2]\cup[-10;0]$. La représentation sur la droite des réels donne :
+
+        \begin{center}
+          \includegraphics{dm1-intervalle2}
+        \end{center}
+
+        et une écriture plus simple est $]-\infty; 0]$.
+
+      \item $]-\infty; -2]\cap[-10;0]$. La représentation sur la droite des réels donne :
+        \begin{center}
+          \includegraphics{dm1-intervalle2}
+        \end{center}
+        et une écriture plus simple est $[-10; -2]$.
+    \end{enumerate}
+  \end{framed}
+
+    \begin{multicols}{2}
+    \begin{enumerate}[]
+      \item $I = [0; +\infty[\cup[-10; 2[$
+      \item $J = [-5; 10]\cup[-10; 5[$
+      \item $K = ]-\infty; -2]\cup[-10; +\infty[$
+    \end{enumerate}
+    \columnbreak
+    \begin{enumerate}[]
+      \item $L = ]-3; 3]\cap[-5; 0[$
+      \item $M = ]5; 7]\cap[0; 2[$
+    \end{enumerate}
+  \end{multicols}
+  \end{exercice}
+
+\end{document}

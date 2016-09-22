@@ -1,0 +1,74 @@
+\chapter{Repérage}
+\section{Repères et coordonnées}
+
+\subsection{Repères}
+
+\begin{definition}
+  Soient $O$ un point du plan et $\vecteur\imath$ et $\vecteur\jmath$ deux vecteurs de ce plan, non colinéaires. $(0, \vecteur\imath, \vecteur\jmath)$ est appelé \emph{repère} du planx
+\end{definition}
+
+\begin{definition}Soit un repère $(0, \vecteur\imath, \vecteur\jmath)$.
+  \begin{itemize}
+    \item Si les directions de $\vecteur\imath$ et $\vecteur\jmath$ sont orthogonales, le repère est dit \emph{orthogonal}.
+    \item Si les normes de $\vecteur\imath$ et $\vecteur\jmath$ sont égales à 1, le repère est dit \emph{normé}.
+    \item Si le repère est orthogonal et normé, il est dit \emph{orthonormé}.
+  \end{itemize}
+\end{definition}
+
+\begin{exemple}TODO Exemples de repères normé, orthogonal, orthonormé.
+\end{exemple}
+
+\subsection{Coordonnées de vecteurs}
+
+\begin{definition}
+  Le plan est muni d'un repère $(O, \vecteur\imath,
+  \vecteur\jmath)$. Pour tout vecteur $\vecteur u$ du plan, il existe un unique
+  couple $(x,y)$ de réels tels que $\vecteur
+  u=x\vecteur\imath+y\vecteur\jmath$.
+
+Ce couple est appelé \emph{coordonnées de $\vecteur{u}$}, et on note
+$\vecteur{u}(x;y)$ ou
+$\vecteur{u}\coord{x}{y}$.
+\end{definition}
+
+\begin{propriete} Soient deux vecteurs $\vecteur u\coord{x}{y}$ et $\vecteur v\coord{x'}{y'}$.
+  \begin{enumerate}
+  \item Les vecteurs $\vecteur u$ et $\vecteur v$ sont égaux si et seulement si $x=x'$ et $y=y'$.
+  \item Les coordonnées du vecteur $\vecteur u+\vecteur v$ sont $\coord{x+x'}{y+y'}$.
+  \item Soit un réel $k$. Les coordonnées du vecteur $k\vecteur u$ sont $\coord{kx}{ky}$.
+\item $\vecteur u$ et $\vecteur v$ sont colinéaires si et seulement si il existe un réel $k$ tel que $\left\{\begin{array}{l}x'=kx\\y'=ky\end{array}\right.$.
+\end{enumerate}
+\end{propriete}
+
+\subsection{Coordonnées de points}
+
+\begin{definition}
+  Soit $(0, \vecteur\imath, \vecteur\jmath)$ un repère du plan, et $M$ un point. Les \emph{coordonnées} de $M$ sont l'unique couple $(x,y)$ de réels tel que $\vecteur{OM}=x\vecteur\imath+y\vecteur\jmath$.
+\end{definition}
+
+\begin{definition}
+  Soient trois points $O$, $I$, $J$ non alignés. Alors $(O, \vecteur{OI}, \vecteur{OJ})$ est un repère, noté $(O, I, J)$.
+\end{definition}
+
+\begin{propriete}
+  Soit $(O,I,J)$ un repère.
+  \begin{itemize}
+    \item Le repère est orthogonal si et seulement si le triangle $OIJ$ est rectangle en $O$ 
+    \item Le repère est normé si et seulement si le triangle $OIJ$ est isocèle en $O$, et $OI=1$.
+    \item Le repère est orthonormé si et seulement si le triangle $OIJ$ est rectangle isocèle en $O$, et $OI=1$.
+  \end{itemize}
+\end{propriete}
+
+\section{Propriétés}
+
+\begin{propriete}
+  Soient $A(x_A,y_A)$ et $B(x_B,y_B)$ deux points du plan. Alors les coordonnées du vecteur $\vecteur{AB}$ sont $(x_B-x_A;y_B-y_A)$.
+\end{propriete}
+
+\begin{propriete}
+  Soient $A(x_A,y_A)$, $B(x_B,y_B)$, $I(x_I,y_I)$ trois point du plan. Alors $I$ est le milieu de $[AB]$ si et seulement si $x_I=\frac{x_A+x_B}{2}$ et $y_I=\frac{y_A+y_B}{2}$.
+\end{propriete}
+
+\begin{propriete}
+  Soient $A(x_A,y_A)$ et $B(x_B,y_B)$ deux points du plan muni d'un repère orthonormé. Alors la longueur $AB$ est égale à $\sqrt{\left(x_B-x_A\right)^2+\left(y_B-y_A\right)^2}$.
+\end{propriete}

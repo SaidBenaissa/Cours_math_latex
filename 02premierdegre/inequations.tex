@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage[landscape,a5paper,margin=1cm]{geometry}
+\pagestyle{empty}
+\usepackage{tabularx}
+
+%\renewcommand{\tabularxcolumn}[1]{>m{#1}}
+\def\tabularxcolumn#1{m{#1}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\newcommand{\droite}{\begin{tikzpicture}[very thick,baseline={($(current bounding box.center)+(0,-2.5ex)$)}]
+  \draw[-latex] (-3,0) -- (3,0);
+  \foreach \i in {-2.5, -2, ..., 2.5} {
+    \draw (\i,.1) -- (\i,-.1);
+  }
+  \draw (-1,0) node[above]{\small $a$};
+  \draw (1.5,0) node[above]{\small $b$};
+\end{tikzpicture}}
+
+\begin{document}
+$a$ et $b$ sont deux nombres, tels que $a<b$.
+
+\begin{tabularx}{\textwidth}{|c|C|C|}
+  \hline
+  Inéquation(s) & Intervalles (et simplification) & Droite des réels\\
+  \hline
+  \hline
+  $x<a$ & & \droite \\
+  \hline
+  $x\leq a$ & & \droite \\
+  \hline
+  $x>a$ & & \droite \\
+  \hline
+  $x\geq a$ & & \droite \\
+  \hline
+  \hline
+  $x<a$ et $x>b$ & & \droite \\
+  \hline
+  $x<a$ ou $x>b$ & & \droite \\
+  \hline
+  $x>a$ et $x<b$ & & \droite \\
+  \hline
+  $x>a$ ou $x<b$ & & \droite \\
+  \hline
+  $x>a$ et $x>b$ & & \droite \\
+  \hline
+  $x>a$ ou $x>b$ & & \droite \\
+  \hline
+  $x<a$ et $x<b$ & & \droite \\
+  \hline
+  $x<a$ ou $x<b$ & & \droite \\
+  \hline
+\end{tabularx}
+
+\end{document}

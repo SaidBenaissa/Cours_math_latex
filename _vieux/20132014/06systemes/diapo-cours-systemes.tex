@@ -1,0 +1,52 @@
+\documentclass[15pt,smaller,aspectratio=169,xcolor={usenames,dvipsnames}]{beamer}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\usepackage{lmodern}
+\usenavigationsymbolstemplate{}
+\useinnertheme[shadow=true]{rounded}
+\useoutertheme{infolines}
+\usecolortheme{crane}
+
+\setbeamerfont{block title}{size={}}
+\setbeamercolor{titlelike}{parent=structure,bg=yellow!85!orange}
+
+\newtheorem*{propriete}{Propriété}
+\newtheorem*{corollaire}{Corollaire}
+\newcommand{\systeme}[2]{\left\{\begin{array}{l}#1\\#2\end{array}\right.}
+
+\title{Systèmes et droites}
+\date{}
+
+\begin{document}
+
+
+\section{Systèmes d'équations linéaires}
+
+\begin{frame}[label=pagesimple]
+
+
+  \begin{block}{3 --- Systèmes d'équations linéaires}
+  \end{block}
+
+\pause
+
+\begin{propriete}[Interprétation géométrique]
+  Soit $(S)$ le système d'équations $\systeme{ax+by=c}{a'x+b'y=c'}$, et $d$ et $d'$ les droites définies par chacune des deux équations de $(S)$. Les solutions de $(S)$ sont les coordonnées des points d'intersection de $d$ et $d'$.
+\end{propriete}
+
+\pause
+
+\begin{corollaire}Avec le même système $(S)$, trois cas seulement sont possibles :
+  \begin{itemize}
+    \item Le systeme $(S)$ a une infinité de solutions si et seulement si les droites $d$ et $d'$ sont confondues.
+    \item Le système $(S)$ a une unique solution si et seulement si les droites $d$ et $d'$ sont sécantes.
+    \item Le système $(S)$ n'a pas de solutions si et seulement si les droites $d$ et $d'$ sont parallèles et non confondues.
+  \end{itemize}
+\end{corollaire}
+\end{frame}
+
+
+
+\end{document}

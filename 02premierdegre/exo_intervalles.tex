@@ -1,0 +1,79 @@
+\documentclass[14pt, aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage[]{tikz}
+\usepackage[]{multicol}
+\usetikzlibrary{calc}
+
+\useoutertheme{infolines}
+\usecolortheme{crane}
+
+\institute{Lycée Marie Curie}
+\date{2014 --- 2015}
+\logo{}
+\title{(In)Équations du premier degré}
+
+\begin{document}
+
+
+\section{Intervalles}
+\begin{frame}
+  Dans chacun des cas, représenter les solutions des couples d'inéquations sur la droite des réels, puis sous fome d'intervalles.
+  \begin{enumerate}
+    \item $x\geq 3$ et $x+2\leq 9$
+    \item $3x\geq1$ et $8-x>$
+    \item $x+1<2x+2$
+    \item $2x>2$ et $x+1\geq 5$
+    \item $3x-3<0$ et $2x+2\leq 3x-3$
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  Dans chacun des cas, représenter les solutions des couples d'inéquations sur la droite des réels, puis sous fome d'intervalles.
+  \begin{enumerate}
+    \item $2x>2$ ou $x+1\geq 5$
+    \item $3x-3<0$ ou $2x+2\leq 3x-3$
+    \item $x\geq 1$ ou $\frac{x}{4}<1$
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \begin{multicols}{2}
+
+  Un potager $ABCD$ rectangulaire est délimité par une cloture. On souhaite augmenter d'une même longueur $x$ chacune des dimensions du rectangle. Sachant que l'on ne dispose, en tout, que de 100~m de cloture, à quel intervalle doit appartenir $x$ ?
+
+  \columnbreak
+
+  \begin{center}
+    \begin{tikzpicture}[scale=3,thick]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (1,0);
+      \coordinate (C) at (1,.6);
+      \coordinate (D) at (0,.6);
+      \draw (A) node[below left]{$A$}
+         -- (B) node[below]{$B$}
+         -- (C) node[above right]{$C$}
+         -- (D) node[left]{$D$}
+         -- cycle;
+      \coordinate (E) at ($(B)+(.5,0)$);
+      \coordinate (F) at ($(E)+(0,{.5+.6})$);
+      \coordinate (G) at ($(F)-(1.5,0)$);
+      \draw[dashed] (B)
+         -- (E) node[below right]{$E$}
+         -- (F) node[above right]{$F$}
+         -- (G) node[above left]{$G$}
+         -- (D);
+         \draw ($.5*(D)+.5*(G)$) node[left]{$x$};
+         \draw ($.5*(B)+.5*(E)$) node[below]{$x$};
+         \draw ($.5*(A)+.5*(D)$) node[left]{$6$};
+         \draw ($.5*(A)+.5*(B)$) node[below]{$10$};
+    \end{tikzpicture}
+  \end{center}
+\end{multicols}
+
+\emph{Toutes les longueurs sont données en mètres.}
+\end{frame}
+
+\end{document}

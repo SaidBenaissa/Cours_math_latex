@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\usepackage{pablo-devoir}
+\usepackage{pablo-listings}
+\usepackage[a5paper]{geometry}
+
+\pagestyle{empty}
+
+\title{Repérage}
+\date{Mardi 23 septembre}
+\classe{2\up{des}14}
+\dsnum{DM 1}
+
+\begin{document}
+
+\maketitle
+\begin{exercice}[Lieu géométrique]
+  Dans un repère orthonormé, on considère un point $A(0;6)$, le cercle $\mathcal{C}$ de centre $A$ et de rayon 5, et la droite $d$ d'équation $y=3$. On recherche les coordonnées des points d'intersection entre $d$ et $\mathcal{C}$.
+  \begin{enumerate}
+    \item Placer $A$, $d$ et $\mathcal{C}$ sur une figure.
+    \item Soit $B$ un point d'intersection entre $d$ et $\mathcal{C}$. On appelle $x$ son abscisse ; quelle est sont ordonnée ?
+    \item Montrer que l'on a : $5=\sqrt{x^2+9}$.
+    \item Résoudre l'équation, et conclure.
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Algorithmique]
+  On considère l'algorithme suivant.
+  \begin{lstlisting}[numbers=left,language=naturel,frame=lines,mathescape=true,escapeinside={(*@}{@*)}]
+  Lire AB
+  Lire AC
+  Lire BC
+  Si $\cdots$ (*@\label{todo}@*)
+  Alors
+    Afficher "Le triangle est rectangle en A"
+  Sinon
+    Afficher "Le triangle n'est pas rectangle en A"
+  FinSi
+  \end{lstlisting}
+
+  Compléter la ligne \ref{todo} de l'algorithme pour qu'étant donné les trois longueurs d'un triangle, il détermine si oui ou non ce triangle est rectangle en $A$.
+
+\end{exercice}
+
+\end{document}

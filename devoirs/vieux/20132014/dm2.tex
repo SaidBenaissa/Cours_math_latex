@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage{pablo-listings}
+\usepackage[a5paper,margin=1.5cm]{geometry}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+
+\pagestyle{empty}
+\begin{document}
+
+  \section*{Devoir à la maison}
+  \emph{À rendre le vendredi 8 novembre}
+  \setcounter{exercice}{0}
+
+  \begin{exercice}[Vecteurs]
+    Exercice 90 page 178.
+  \end{exercice}
+
+  \begin{exercice}[Algorithmique]~
+    \begin{enumerate}[(1)]
+      \item On considère l'algorithme suivant.
+        \begin{lstlisting}[literate={->}{{$\rightarrow$}}1 {*}{$\times$}1 ,frame=simple]
+Choisir un nombre n
+n -> m
+n + 3 -> n
+n * 2 -> n
+n + m -> n
+n / 3 -> n
+n - 2 -> n
+Afficher n
+        \end{lstlisting}
+        \begin{enumerate}[(a)]
+          \item Exécuter (sans la calculatrice) l'algorithme avec 1, 5, puis
+            10 comme nombre de départ.
+          \item Que fait l'algorithme ?
+        \end{enumerate}
+      \item Un photographe propose le tarif suivant pour développer des
+        photographies : 0,16 euros par photo pour moins de 75 photos ; 3 euros
+        plus 0,12 euros par photo pour 75 photos et plus.
+
+        Écrire un algorithme qui prend en entrée le nombre de photo à
+        développer, et qui affiche le prix total.
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}[Statistiques]~
+    \begin{enumerate}[(1)]
+      \item Dans la langue française, la fréquence, en pourcentage, d'apparition des différentes lettres de l'alphabet est la suivante.
+
+        \hspace{-1cm}\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+          Lettre&a&b&c&d&e&f&g&h&i\\\hline
+          Fréquence & 8,11 & 0,81 & 3,38 & 4,28 & 17,69 & 1,13 & 1,19 & 0,74 & 7,24 \\
+        \end{tabular}
+
+        \hspace{-1cm}\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+          Lettre&j&k&l&m&n&o&p&q&r\\\hline
+          Fréquence & 0,18 & 0,02 & 5,99 & 2,29 & 7,68 & 5,2 & 2,92 & 0,83 & 6,53 \\
+        \end{tabular}
+
+        \hspace{-1cm}\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+          Lettre&s&t&u&v&w&x&y&z\\
+          \hline
+          Fréquence & 8,87 & 7,44 & 5,23 & 1,28 & 0,06 & 0,53 & 0,26 & 0,12
+        \end{tabular}
+
+        D'après ce tableau de fréquences, peut-on dire que les voyelles sont plus utilisées que les consonnes dans la langue française ?
+
+      \item Voici les trois premiers vers d'un poème d'Omar Khayyam
+        (mathématicien perse) contenant 132 lettres.
+
+        \begin{tabular}{|l}
+          Ma venue ne fut d'aucun profit pour la sphère céleste\\
+          Mon départ ne diminuera ni sa beauté ni sa grandeur\\
+          Mes deux oreilles n'ont jamais entendu dire par personne\\
+        \end{tabular}
+
+        \begin{enumerate}[(a)]
+          \item D'après le tableau de la question précédente, quel devrait être le nombre de lettres \og{}e\fg{} et le nombre de lettres \og{}z\fg{} dans ce poème ?
+          \item Combien de lettres \og{}e\fg{} et \og{}z\fg{} le poème contient-il ?
+          \item Expliquer les résultats obtenus.
+        \end{enumerate}
+
+      \item Le codage d'un texte selon le \emph{chiffre de César} correspond
+        au remplacement de chaque lettre par une autre située $n$ places plus
+        loin dans l'alphabet. Par exemple, si $n=1$, les lettres $a$ sont
+        remplacées par $b$, les $b$ par $c$, etc.
+
+        Le quatrième vers du poème d'Omar Khayyam, codé selon cette méthode, est : « VO ZYEBAEYS NO MODDO FOXEO OD MOVES NO MO NOZKBD ».
+
+        \begin{enumerate}[(a)]
+          \item Établir la fréquence d'apparition des lettres de ce texte codé.
+          \item En supposant que ces fréquences sont similaires à celles données à la première question, décoder le vers.
+          \item N DHRYYR RCBDHR N IRPH BZNE XUNLLNZ ?
+        \end{enumerate}
+
+
+    \end{enumerate}
+  \end{exercice}
+
+\end{document}

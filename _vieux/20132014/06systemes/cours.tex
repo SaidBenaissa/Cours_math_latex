@@ -1,0 +1,93 @@
+\chapter{Systèmes et Droites}
+\section{Équations de droites}
+
+\begin{propriete}[Caractérisation analytique d'une droite]
+  Soit un repère du plan $(O, \vecteur{\imath}, \vecteur{\jmath})$, et $d$
+  une droite de ce repère.
+
+  \begin{itemize}
+    \item Si $d$ est parallèle à l'axe des ordonnées, alors elle admet une
+      unique équation de la forme $x=c$, où $c$ est un réel.
+    \item Sinon, elle admet une unique équation de la forme $y=mx+p$, où $m$ et
+      $p$ sont des réels.
+  \end{itemize}
+\end{propriete}
+TODO Démonstration
+
+\begin{propriete}[Réciproque]
+  Soit un repère $(O, \vecteur{\imath}, \vecteur{\jmath})$.
+  \begin{itemize}
+    \item Étant donné un réel $c$, l'ensemble des points du plan
+      vérifiant l'équation $x=c$ est une droite parallèle à l'axe des
+      ordonnées.
+    \item Étant donnés deux réels $m$ et $p$, l'ensemble des points du plan
+      vérifiant l'équation $y=mx+p$ est une droite non parallèle à l'axe des
+      ordonnées.
+  \end{itemize}
+\end{propriete}
+
+\subsection*{Coefficient et vecteurs directeurs}
+
+\begin{propriete}[Coefficient directeur]
+  Soient $A(x_A, y_A)$ et $B(x_B, y_B)$ deux points d'une droite $d$, tels que
+  $x_A\neq x_B$. Alors l'équation de $d$ est de la forme $y=mx+p$, et
+  $m=\dfrac{y_B-y_A}{x_B-x_A}$.
+\end{propriete}
+
+\begin{definition}
+  Soit $d$ une droite du plan. Un \emph{vecteur directeur} de $d$ est un
+  vecteur non nul de même direction que la droite $d$.
+\end{definition}
+
+\begin{propriete}
+  Soient $(O, \vecteur\imath, \vecteur\jmath)$ un repère et $d$ une droite.
+  \begin{itemize}
+    \item Si $d$ est parallèle à l'axe des ordonnées, le vecteur
+      $\vecteur\jmath$ est un vecteur directeur de $d$.
+    \item Sinon, le vecteur de coordonnées $\coord{1}{a}$ (où $a$ est le
+      coefficient directeur de la droite) est un vecteur directeur de $d$.
+
+      TODO Tous les vecteurs colinéaires sont aussi directeurs
+  \end{itemize}
+\end{propriete}
+
+\begin{propriete}
+  Soient trois points $A$, $B$, $C$. Les conditions suivantes sont équivalentes.
+  \begin{enumerate}[(i)]
+    \item $A$, $B$ et $C$ sont alignés.
+    \item Les droites $(AB)$ et $(AC)$ sont confondues.
+    \item Les vecteurs $\vecteur{AB}$ et $\vecteur{AC}$ sont colinéaires.
+  \end{enumerate}
+\end{propriete}
+
+\section{Intersections de droites}
+
+\begin{propriete}
+  Soient un repère $(O, \vecteur\imath, \vecteur\jmath)$, et deux droites $d$
+  et $d'$ non parallèles à l'axe des ordonnées. Les propositions suivantes sont
+  équivalentes.
+  \begin{enumerate}[(i)]
+    \item Les droites $d$ et $d'$ sont parallèles.
+    \item Les droites $d$ et $d'$ ont même coefficient directeur.
+    \item Les droites $d$ et $d'$ ont deux vecteurs directeurs colinéaires.
+  \end{enumerate}
+\end{propriete}
+
+\begin{propriete}[Intersection de droites]
+  Soient deux droites $d$ et $d'$.
+  TODO : Bilan : Conditions de parallélisme.
+\end{propriete}
+
+\section{Systèmes d'équations linéaires}
+
+\begin{propriete}[Interprétation géométrique]
+  Soit $(S)$ le système d'équations $\systeme{ax+by=c}{a'x+b'y=c'}$, et $d$ et $d'$ les droites définies par chacune des deux équations de $(S)$. Les solutions de $(S)$ sont les coordonnées des points d'intersection de $d$ et $d'$.
+\end{propriete}
+
+\begin{corollaire}Avec le même système $(S)$, trois cas seulement sont possibles :
+  \begin{itemize}
+    \item Le systeme $(S)$ a une infinité de solutions si et seulement si les droites $d$ et $d'$ sont confondues.
+    \item Le système $(S)$ a une unique solution si et seulement si les droites $d$ et $d'$ sont sécantes.
+    \item Le système $(S)$ n'a pas de solutions si et seulement si les droites $d$ et $d'$ sont parallèles et non confondues.
+  \end{itemize}
+\end{corollaire}

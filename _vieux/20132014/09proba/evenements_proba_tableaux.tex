@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage{tabularx}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{multicol}
+
+\usepackage[landscape,a5paper,margin=1cm]{geometry}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{activite}~
+  \begin{enumerate}
+    \item Une urne contient des boules numérotées, blanches \textcircled{1} \textcircled{2} \textcircled{2} et rouges \textcircled{1} \textcircled{2}. On prend une boule au hasard dans l'urne.
+      \begin{enumerate}
+        \item Quel est la probabilité de l'évènement \evenement{A}{Tirer une boule numérotée 0}.
+        \item Quel est la probabilité de l'évènement \evenement{B}{Tirer une boule blanche ou une boule rouge}.
+        \item \evenement{C_1}{Tirer une boule  blanche} et \evenement{C_2}{Tirer une boule rouge} ;
+
+          \evenement{D_1}{Tirer une boule numérotée 1} et \evenement{D_2}{Tirer une boule numérotée 2}.
+        \item \begin{multicols}{2}
+          \evenement{E_1}{Tirer une boule blanche},\\
+          \evenement{E_2}{Tirer une boule rouge},\\
+          \evenement{E_3}{Tirer une boule blanche et rouge},\\
+          \evenement{E_4}{Tirer une boule blanche ou rouge}.
+
+          \evenement{F_1}{Tirer une boule rouge},\\
+          \evenement{F_2}{Tirer une boule numérotée 1},\\
+          \evenement{F_3}{Tirer une boule rouge numérotée 1},\\
+          \evenement{F_4}{Tirer une boule rouge ou numérotée 1}.
+        \end{multicols}
+      \end{enumerate}
+
+    \item Soit une expérience aléatoire d'univers $\Omega$, et des évènements $A$ et $B$ quelconques. En vous aidant des réponses à la question précédente, conjecturer :
+      \begin{inparaenum}
+        \item la valeur $P(\emptyset)$ ;
+        \item la valeur $P(\Omega)$ ;
+        \item une relation entre $P(\bar A)$ et $P(A)$ ;
+        \item une relation entre $P(A)$, $P(B)$, $P(A\cap B)$ et $P(A\cup B)$.
+      \end{inparaenum}
+\end{enumerate}
+\end{activite}
+
+\vspace{\stretch{1}}
+\dotfill
+\raisebox{-0.22\baselineskip}{\ding{34}}
+\dotfill
+\dotfill
+\raisebox{-0.22\baselineskip}{\ding{34}}
+\dotfill
+\dotfill
+\raisebox{-0.22\baselineskip}{\ding{34}}
+\dotfill
+\vspace{\stretch{1}}
+
+\begin{activite}Dans une classe de secondes de 29 élèves, 16 élèves pratiquent le ski, 11 élèves le surf, et 4 élèves les deux sports.
+  \begin{enumerate}
+    \item Combien d'élèves ne pratiquent ni l'un ni l'autre ? Quelle est la probabilité qu'un élève pris au hasard ne pratique aucun des sports ?
+    \item Quelle est la probabilité qu'un élève pratiquant au hasard parmi ceux pratiquant le ski pratique aussi le surf ?
+  \end{enumerate}
+\end{activite}
+
+\end{document}

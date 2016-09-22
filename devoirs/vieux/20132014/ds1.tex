@@ -1,0 +1,74 @@
+\documentclass[12pt,landscape]{article}
+\setlength{\columnsep}{3em}
+
+\usepackage{pablo}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{enumerate}
+\usepackage{multicol}
+
+\newcommand{\enonce}{
+  \section*{Généralités sur les fonctions --- DS}
+  \emph{23 septembre 2013 --- Nom :}
+  \setcounter{exercice}{0}
+
+  \begin{exercice}[Calcul d'antécédents --- 3 points]
+    Soit $f$ la fonction définie par $f:x\mapsto \frac{2}{x+1}$.
+    \begin{enumerate}[(a)]
+      \item Calculer, s'ils existent, les antécédents de 4.
+        \vspace{2cm}
+      \item Calculer, s'ils existent, les antécédents de 0.
+        \vspace{2cm}
+    \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}[Représentation graphique --- 3 points]
+    Tracer la courbe représentative de la fonction $h:x\mapsto \frac{x^2}{2} + \frac{x}{2} - 1$ sur $\left[-2; 2\right]$ (faire apparaître les calculs à droite du graphique).
+
+
+      \begin{tikzpicture}[domain=-2:4, scale=1]
+      \draw[very thin,color=gray,step=1] (-2.5,-3.5) grid (2.5,3.5);
+      \draw[->] (-2.5,0) -- (2.5,0);
+      \draw (1,0) node[below] {1};
+      \draw[->] (0,-3.5) -- (0,3.5);
+      \draw (0,1) node[right] {1};
+      \draw (0,0) node[below left] {0};
+      %\draw[color=blue,domain=-2:2] plot (\x,{(\x-1)*(\x+2)/2});
+      \end{tikzpicture}
+
+  \end{exercice}
+
+  \begin{exercice}[Lecture graphique --- 4 points] Voici la courbe représentative d'une fonction $g$. Répondre aux questions suivantes en faisant apparaître les traits de construction.
+    \begin{enumerate}[(a)]
+      \item Quelles sont les images de -1 et 2 par $g$ ?
+        \vspace{2cm}
+      \item Quels sont les antécédents de 0 et 3 par $g$ ?
+        \vspace{2cm}
+      \item Quelles sont les solutions de l'inéquation $g(x)\geq1$ ?
+        \vspace{2cm}
+    \end{enumerate}
+
+    \begin{center}
+      \begin{tikzpicture}[domain=-2:4, scale=1]
+      \draw[very thin,color=gray,step=1] (-2.5,-2.5) grid (3.5,3.5);
+      \draw[->] (-2.5,0) -- (3.5,0);
+      \draw (1,0) node[below] {1};
+      \draw[->] (0,-2.5) -- (0,3.5);
+      \draw (0,1) node[right] {1};
+      \draw (0,0) node[below left] {0};
+      \draw[color=blue,domain=-2:3.2]
+      plot (\x,{-\x*(\x-1)*cos(80*\x + 30)});
+      \end{tikzpicture}
+    \end{center}
+    
+  \end{exercice}
+
+}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{multicols}{2}
+\enonce
+\end{multicols}
+
+\end{document}

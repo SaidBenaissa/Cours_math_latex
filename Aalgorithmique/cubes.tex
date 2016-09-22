@@ -1,0 +1,349 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{tabularx}
+\usepackage{forloop}
+
+\pagestyle{empty}
+
+\usetikzlibrary{chains}
+
+\newcounter{ct}
+\newcommand{\probleme}[7]{
+  \section[#1]{#1 \forloop{ct}{0}{\value{ct}<#2}{$\star$}}
+  \begin{tabularx}{\textwidth}{Xc}
+    \begin{description}
+      \item[Nombre de colonnes] #5
+      \item[Entrée] #3
+      \item[Sortie] #4
+    \end{description}
+    &
+    \tikzset{
+      cube/.style={
+        rectangle,
+        draw=black,
+        minimum width=1em,
+      }
+    }
+    \begin{tabular}[t]{c||c}
+      \\
+      \begin{tikzpicture}[
+          start chain=going above,
+          node distance=1pt,
+        ]
+        \foreach \i in {1, ..., #5}
+        {
+          \draw[very thick] ({.7*\i},0) -- ++(.5, 0);
+        }
+        #6
+      \end{tikzpicture}
+      &
+      \begin{tikzpicture}[
+          start chain=going above,
+          node distance=1pt,
+        ]
+        \foreach \i in {1, ..., #5}
+        {
+          \draw[very thick] ({.7*\i},0) -- ++(.5, 0);
+        }
+        #7
+      \end{tikzpicture}
+      \\
+      Entrée & Sortie \\
+      \multicolumn{2}{c}{\textbf{Exemple}}
+    \end{tabular}
+  \end{tabularx}
+}
+\begin{document}
+\probleme{Inversion}{1}{
+  Une pile de nombres sur la colonne de gauche
+}{
+  La même pile, éventuellement sur une autre colonne, inversée.
+}{
+  2
+}{
+  \node[anchor=south, on chain, cube] at (.95, 0) {1};
+  \node[on chain, cube]{5};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{3};
+}{
+  \node[anchor=south, on chain, cube] at (1.65, 0) {3};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{5};
+  \node[on chain, cube]{1};
+}
+
+\probleme{Décalage}{2}{
+  Une pile de nombres sur la colonne de gauche
+}{
+  La même pile, décalée sur une colonne plus à droite
+}{
+  3
+}{
+  \node[anchor=south, on chain, cube] at (.95, 0) {1};
+  \node[on chain, cube]{5};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{3};
+}{
+  \node[anchor=south, on chain, cube] at (2.35, 0) {1};
+  \node[on chain, cube]{5};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{3};
+}
+
+\probleme{Parité}{1}{
+  Une pile de nombres sur la colonne centrale
+}{
+  Les nombres pairs sur la colonne de gauche, les nombres impairs sur celle de droite. L'ordre des nombres n'a pas d'importance.
+}{
+  3
+}{
+  \node[anchor=south, on chain, cube] at (1.65, 0) {1};
+  \node[on chain, cube]{5};
+  \node[on chain, cube]{4};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{3};
+  \node[on chain, cube]{2};
+}{
+  \node[anchor=south, on chain, cube] at (.95, 0) {2};
+  \node[on chain, cube]{4};
+  \node[anchor=south, on chain, cube] at (2.35, 0) {1};
+  \node[on chain, cube]{5};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{3};
+}
+
+\probleme{Conjonction}{2}{
+  Une pile de nombres sur la colonne de gauche
+}{
+  Les nombres bleus pairs sur la deuxième colonne, les nombres bleus impairs sur la troisième colonne, les cubes rouges sur la dernière colonne.
+}{
+  4
+}{\scriptsize
+  \node[anchor=south, on chain, cube] at (0.95, 0) {B1};
+  \node[on chain, cube]{B5};
+  \node[on chain, cube]{R4};
+  \node[on chain, cube]{B7};
+  \node[on chain, cube]{R3};
+  \node[on chain, cube]{B2};
+}{\scriptsize
+  \node[anchor=south, on chain, cube] at (1.65, 0) {B2};
+  \node[anchor=south, on chain, cube] at (2.35, 0) {B1};
+  \node[on chain, cube]{B7};
+  \node[on chain, cube]{B5};
+  \node[anchor=south, on chain, cube] at (2.95, 0) {R4};
+  \node[on chain, cube]{R3};
+}
+
+\probleme{Disjonction}{2}{
+  Une pile de nombres sur la colonne de gauche
+}{
+  Les nombres bleus ou pairs sur la deuxième colonne, les autres sur la troisième colonne.
+}{
+  3
+}{\scriptsize
+  \node[anchor=south, on chain, cube] at (0.95, 0) {R1};
+  \node[on chain, cube]{B5};
+  \node[on chain, cube]{R4};
+  \node[on chain, cube]{B7};
+  \node[on chain, cube]{R3};
+}{\scriptsize
+  \node[anchor=south, on chain, cube] at (1.65, 0) {B7};
+  \node[on chain, cube]{B5};
+  \node[on chain, cube]{R4};
+  \node[anchor=south, on chain, cube] at (2.35, 0) {R3};
+  \node[on chain, cube]{R1};
+}
+
+\probleme{Parité 2}{2}{
+  Deux piles de nombres sur les colonnes centrales
+}{
+  Les nombres pairs sur la colonne de gauche, les nombres impairs sur celle de droite. L'ordre des nombres n'a pas d'importance.
+}{
+  4
+}{
+  \node[anchor=south, on chain, cube] at (1.65, 0) {1};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{3};
+  \node[on chain, cube]{2};
+  \node[anchor=south, on chain, cube] at (2.35, 0) {4};
+  \node[on chain, cube]{5};
+}{
+  \node[anchor=south, on chain, cube] at (.95, 0) {2};
+  \node[on chain, cube]{4};
+  \node[anchor=south, on chain, cube] at (3.05, 0) {1};
+  \node[on chain, cube]{5};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{3};
+}
+
+\probleme{Maximum}{3}{
+  Une pile de nombres sur la colonne centrale.
+}{
+  Le plus grand nombre au sommet de  la colonne de droite ; la position des autres nombres n'a pas d'importance.
+}{
+  3
+}{
+  \node[anchor=south, on chain, cube] at (1.65, 0) {1};
+  \node[on chain, cube]{7};
+  \node[on chain, cube]{3};
+  \node[on chain, cube]{2};
+  \node[on chain, cube]{5};
+}{
+  \node[anchor=south, on chain, cube] at (.95, 0) {2};
+  \node[on chain, cube]{3};
+  \node[anchor=south, on chain, cube] at (1.65, 0) {1};
+  \node[anchor=south, on chain, cube] at (2.35, 0) {5};
+  \node[on chain, cube]{7};
+}
+
+\probleme{Ordonner}{3}{
+  Une pile de cubes rouges et bleus sur la colonne de gauche, mélangés.
+}{
+  Sur la colonne de droite, les cubes rouge en bas, et les bleus en haut.
+}{
+  3
+}{
+  \node[anchor=south, on chain, cube] at (0.95, 0) {B};
+  \node[on chain, cube]{R};
+  \node[on chain, cube]{R};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{R};
+}{
+  \node[anchor=south, on chain, cube] at (2.35, 0) {R};
+  \node[on chain, cube]{R};
+  \node[on chain, cube]{R};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+}
+
+\probleme{Échange}{2}{
+  Une pile de cubes bleus à gauche, une pile de cubes rouges à droite.
+}{
+  Les mêmes piles, mais leur position est inversée.
+}{
+  3
+}{
+  \node[anchor=south, on chain, cube] at (2.35, 0) {R};
+  \node[on chain, cube]{R};
+  \node[on chain, cube]{R};
+  \node[anchor=south, on chain, cube] at (0.95, 0) {B};
+  \node[on chain, cube]{B};
+}{
+  \node[anchor=south, on chain, cube] at (0.95, 0) {R};
+  \node[on chain, cube]{R};
+  \node[on chain, cube]{R};
+  \node[anchor=south, on chain, cube] at (2.35, 0) {B};
+  \node[on chain, cube]{B};
+}
+
+\probleme{Ramassage}{3}{
+  Quelques cubes dans chaque colonne.
+}{
+  Tous les cubes sur la colonne de gauche.
+}{
+  5
+}{
+  \node[anchor=south, on chain, cube] at (0.95, 0) {B};
+  \node[on chain, cube]{B};
+  \node[anchor=south, on chain, cube] at (1.65, 0) {B};
+  \node[anchor=south, on chain, cube] at (2.35, 0) {B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[anchor=south, on chain, cube] at (3.75, 0) {B};
+  \node[on chain, cube]{B};
+}{
+  \node[anchor=south, on chain, cube] at (0.95, 0) {B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+}
+
+\probleme{Distribution}{3}{
+  Des cubes bleus sur la colonne de gauche.
+}{
+  Chaque colonne contient autant de cube, à un près, sauf la colonne de départ, qui est vide.
+}{
+  5
+}{
+  \node[anchor=south, on chain, cube] at (0.95, 0) {B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+  \node[on chain, cube]{B};
+}{
+  \node[anchor=south, on chain, cube] at (1.65, 0) {B};
+  \node[on chain, cube]{B};
+  \node[anchor=south, on chain, cube] at (2.35, 0) {B};
+  \node[on chain, cube]{B};
+  \node[anchor=south, on chain, cube] at (3.05, 0) {B};
+  \node[anchor=south, on chain, cube] at (3.75, 0) {B};
+  \node[on chain, cube]{B};
+}
+
+\probleme{Croissant}{4}{
+  Des cubes sur la première colonne.
+}{
+  Les cubes, triés par ordre croissant (le plus petit en dessous) sur la colonne de droite.
+}{
+  4
+}{
+  \node[anchor=south, on chain, cube] at (0.95, 0) {3};
+  \node[on chain, cube]{5};
+  \node[on chain, cube]{2};
+  \node[on chain, cube]{1};
+  \node[on chain, cube]{4};
+}{
+  \node[anchor=south, on chain, cube] at (3.05, 0) {1};
+  \node[on chain, cube]{2};
+  \node[on chain, cube]{3};
+  \node[on chain, cube]{4};
+  \node[on chain, cube]{5};
+}
+
+\probleme{Égalité}{2}{
+  Un nombre pair de cubes sur la première colonne.
+}{
+  Autant de cubes sur la deuxième colonne que sur la troisième.
+}{
+  3
+}{
+  \node[anchor=south, on chain, cube] at (0.95, 0) {};
+  \node[on chain, cube]{};
+  \node[on chain, cube]{};
+  \node[on chain, cube]{};
+  \node[on chain, cube]{};
+  \node[on chain, cube]{};
+}{
+  \node[anchor=south, on chain, cube] at (2.35, 0) {};
+  \node[on chain, cube]{};
+  \node[on chain, cube]{};
+  \node[anchor=south, on chain, cube] at (1.65, 0) {};
+  \node[on chain, cube]{};
+  \node[on chain, cube]{};
+}
+
+\probleme{Quelle colonne ?}{2}{
+  Entre 1 et 5 cubes sur la première colonne.
+}{
+  Tous les cubes placés sur la colonne correspondant à leur nombre, plus un (c'est-à-dire sur la seconde colonne s'il n'y a qu'un cube, sur la troisième colonne s'il y a deux cubes, etc.).
+}{
+  6
+}{
+  \node[anchor=south, on chain, cube] at (0.95, 0) {};
+  \node[on chain, cube]{};
+  \node[on chain, cube]{};
+}{
+  \node[anchor=south, on chain, cube] at (3.05, 0) {};
+  \node[on chain, cube]{};
+  \node[on chain, cube]{};
+}
+
+\end{document}

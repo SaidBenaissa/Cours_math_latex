@@ -1,0 +1,98 @@
+\documentclass{article}
+
+\usepackage{pablo}
+\usepackage{pablo-listings}
+\usepackage[a5paper,margin=1.8cm]{geometry}
+\usepackage{tabularx}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE Dichotomie\\}
+
+    \Large Approximation de la solution d'une équation
+\hrule
+\end{center}
+
+L'objet de cet exercice est de trouver une solution approchée de l'équation $x^3-x^2-7x-8=0$.
+
+\begin{enumerate}
+    \item \emph{Approche graphique (5 minutes)}
+        \begin{enumerate}
+            \item À la calculatrice ou avec le logiciel \emph{Géogébra}, tracer la courbe représentative de la fonction $f:x\mapsto x^3-x^2-7x-8$. Tracer l'allure de la courbe sur votre compte-rendu.
+            \item Combien de solutions semble avoir l'équation étudiée ?
+            \item \label{encadrement} Donner un encadrement d'une des solutions.
+        \end{enumerate}
+    \item \emph{Algorithme de dichotomie à la main (20 minutes)}\label{main} L'algorithme de dichotomie permet de trouver une solution approchée de l'équation considérée (les points d'interrogation sont à remplacer par les valeurs trouvées à la question \ref{encadrement}).
+
+        \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+        a <- ???
+        b <- ???
+
+        Pour n allant de 1 $à$ 10:
+        Faire
+            m <- $\frac{a+b}{2}$
+            Si $f(a)$ et $f(m)$ $\text{sont de même signe}$
+            Alors
+                a <- m
+            Sinon
+                b <- m
+            FinSi
+        FinPour
+        Afficher a, b
+        \end{lstlisting}
+        \begin{enumerate}
+            \item Exécuter l'algorithme en complétant le tableau suivant, pour les trois premières itérations.
+
+                \begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|}
+                    \hline
+                    n & m & a & b \\
+                    \hline
+                    \hline
+                    XXXXX & XXXXX &   &   \\
+                    \hline
+                    1 &   &   &   \\
+                    \hline
+                    2 &   &   &   \\
+                    \hline
+                    3 &   &   &   \\
+                    \hline
+                \end{tabularx}
+            \item Bilan : Donner un encadrement de la solution de l'équation.
+        \end{enumerate}
+    \item \emph{Mise en œuvre informatique de l'algorithme. (20 minutes)} Afin d'automatiser ce calcul, et de pouvoir obtenir une approximation bien plus précise, nous allons réaliser un programme informatique pour réaliser cette tâche.
+        \begin{enumerate}
+            \item Recopier le code Python suivant dans AmiensPython.
+                \begin{lstlisting}[language=python,frame=lines,mathescape=true]
+                def f(x):
+                    return x**3-x**2+7*x-8
+
+                print f(0)
+                print f(2)
+                \end{lstlisting}
+                À quoi servent ces lignes ?
+            \item Effacer les deux dernières lignes de votre programme (celles commençant par \texttt{print}), et recopier et compléter le code suivant, qui est une traduction en Python de l'algorithme de la question \ref{main} (remplacer les points d'interrogation par les bonnes valeurs).
+                \begin{lstlisting}[language=python,frame=lines,mathescape=true]
+                a = ???
+                b = ???
+                for i in range(10):
+                    m = ???
+                    if f(m) * f(a) > 0:
+                        a = m
+                    else:
+                        b = m
+                print (a, b)
+                \end{lstlisting}
+            \item Faire fonctionner cet algorithme, et donner un encadrement de la solution de l'équation.
+            \item Modifier l'algorithme pour augmenter la précision de l'approximation, et donner un nouvel encadrement.
+        \end{enumerate}
+    \item \emph{Pour aller plus loin.}
+        \begin{enumerate}
+            \item Modifier l'algorithme pour qu'il s'arrête lorsque la solution proposée est correcte au dixième près. Au millième près.
+            \item Expliquer en quoi le test $f(m)\times f(a)>0$ permet de tester si $f(m)$ et $f(a)$ sont de même signe.
+            \item Modifier l'algorithme pour qu'il trouve une solution de $f(x)=5$ plutôt que de $f(x)=0$.
+        \end{enumerate}
+\end{enumerate}
+\end{document}

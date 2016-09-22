@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage[a6paper,margin=0cm,landscape]{geometry}
+\pagestyle{empty}
+
+\begin{document}
+
+\vspace*{\stretch{1}}
+\begin{center}
+  \begin{tikzpicture}[very thick, scale=0.8]
+    \draw[dotted, gray] (0,0) grid (15, 10);
+
+    \draw (1, 2) node{$\bullet$} node[above left]{$M$};
+    \draw (2, 4) node{$\bullet$} node[above left]{$N$};
+    \draw (4, 8) node{$\bullet$} node[above left]{$O$};
+    \draw (9, 9)  node{$\bullet$} node[above left]{$A$};
+    \draw (13, 8) node{$\bullet$} node[above left]{$B$};
+  \end{tikzpicture}
+\end{center}
+\vspace*{\stretch{1}}
+
+\end{document}

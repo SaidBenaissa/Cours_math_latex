@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage{pgfplots}
+\usepackage{numprint}
+\usepackage{calc}
+\usepackage[paperwidth=210mm,paperheight={297mm/4},margin=1cm]{geometry}
+\usetikzlibrary{calc}
+
+\pagestyle{empty}
+\begin{document}
+
+\setcounter{section}{1}
+\section{Représentations graphiques}
+
+Dans cette partie, nous travaillerons sur les exemples suivants.
+
+\begin{enumerate}[(a)]
+  \item Répartition des résidences principales selon le nombre d'habitants (source : \textsc{Insee}).
+
+    \begin{center}
+      \begin{tabular}{c||c|c|c|c|c|c}
+        Nombre d'habitants &
+        1 & 2 & 3 & 4 & 5 & 6 et plus
+        \\
+        \hline
+        Fréquence (en \%) &
+        22,1 &
+        27,6 &
+        19,1 &
+        15,3 &
+        8,2 &
+        7,6
+        \\
+      \end{tabular}
+    \end{center}
+
+  \item Répartition de la population française par âge, en 2013 (source : \textsc{Insee}).
+
+    \begin{center}
+      \begin{tabular}{c||c|c|c|c|c|c}
+        Âges & $\left[ 0;20 \right[$
+          & $\left[ 20;40 \right[$
+            & $\left[ 40;60 \right[$
+              & $\left[ 60;80 \right[$
+                & $\left[ 80;100 \right[$
+                  & $\left[ 100;120 \right[$ \\
+                    \hline
+                    Effectifs & \numprint{15 533 825}
+                    & \numprint{15 699 248}
+                    & \numprint{17 114 131}
+                    & \numprint{11 671 532}
+                    & \numprint{3 621 065}
+                    & \numprint{19 807}
+                    \\
+                  \end{tabular}
+                \end{center}
+\end{enumerate}
+
+\end{document}

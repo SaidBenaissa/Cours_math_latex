@@ -1,0 +1,62 @@
+\documentclass{article}
+
+\usepackage{pablo}
+\usepackage[a5paper]{geometry}
+
+\newcommand{\racine}{
+  \setcounter{nth-gaps}{1}
+  \setcounter{section}{1}
+
+      \section{Somme de deux vecteurs}
+      \tikzstyle{point}=[draw, shape=circle, fill=black, inner sep=0pt, minimum size=5pt]
+      \begin{tikzpicture}[scale=0.8]
+      \draw[very thin,color=gray,step=1] (0,0) grid (13,5);
+      \draw (1,1) -- (3,3) -- (6,3) -- (4,1) -- (1, 1);
+      \node[left] at (1,1) {$A$};
+      \node[above left] at (3,3) {$B$};
+      \node[above] at (6,3) {$C$};
+      \node[below] at (4,1) {$D$};
+      \node[below left] at (7,2) {$E$};
+      \node[point] at (7,2) {};
+      \end{tikzpicture}
+
+      \begin{enumerate}[(a)]
+        \item Placer le point $F$ tel que $\overrightarrow{EF}=\overrightarrow{AB}$.
+        \item Placer le point $G$ tel que $\overrightarrow{FG}=\overrightarrow{BC}$.
+        \item Placer le point $H$ tel que $\overrightarrow{EH}=\overrightarrow{AC}$.
+        \item Que remarquez-vous ? Comment traduire cela par une égalité de vecteurs ?
+      \end{enumerate}
+
+      \begin{propriete}[Relation de Chasles]
+      Pour tous points $A$, $B$, $C$ du plan, on a :
+
+      \blanc{$\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AC}$.}
+    \end{propriete}
+
+    \begin{definition}
+      Soient $\vec{u}$ et $\vec{v}$ deux vecteurs. On appelle \blanc{somme}
+      des vecteurs $\vec{u}$ et $\vec{v}$, le vecteur $\vec{w}$ associé à la
+      transformation résultant de \blanc{l'enchaînement des translations de vecteur
+      $\vec{u}$ et $\vec{v}$}.
+    \end{definition}
+
+    \begin{definition}[Différence de deux vecteurs]
+      Étant donnés deux vecteurs $\vec{u}$ et $\vec v$, on appelle
+      \blanc{différence} de $\vec u$ et $\vec v$, le vecteur $\vec w$, noté \blanc{$\vec{w}=\vec{u}-\vec{v}$} tel que :
+
+      \blanc{$\vec u-\vec v=\vec u + (-\vec v)$}
+    \end{definition}
+
+    \begin{propriete}
+      Pour tous points $A$ et $B$, \blanc{$-\overrightarrow{AB}=\overrightarrow{BA}$}.
+    \end{propriete}
+}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\racine
+
+\end{document}

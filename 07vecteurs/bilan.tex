@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage[a5paper,landscape,margin=1.5cm]{geometry}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+\Large Vecteurs --- Bilan
+\end{center}
+
+\begin{multicols}{2}
+\begin{propriete}[Parallélogramme]Soient $A$, $B$, $C$, $D$ quatre points.
+
+    Deux vecteurs $\vecteur{AB}$ et $\vecteur{CD}$ sont égaux si et seulement
+    si le quadrilatère $ABDC$ est un parallélogramme (éventuellement aplati).
+\end{propriete}
+
+\begin{propriete}[Relation de Chasles] Pour tous points $A$, $B$ et $C$ :
+  \[\vecteur{AB}+\vecteur{BC}=\vecteur{AC}\]
+\end{propriete}
+
+\begin{propriete}[Milieu]
+  Soient $A$, $B$ et $I$ trois points. Les propriétés suivantes sont équivalentes :
+  \begin{enumerate}[(i)]
+    \item $I$ est le milieu de $[AB]$ ;
+    \item $\vecteur{AI}=\vecteur{IB}$ ;
+    \item $2\vecteur{AI}=\vecteur{AB}$.
+  \end{enumerate}
+\end{propriete}
+
+\begin{propriete}[Alignement] Soient $A$, $B$, $C$, $D$ quatre points distincts.
+  \begin{enumerate}[(i)]
+    \item $A$, $B$ et $C$ sont alignés  si et seulement si $\vecteur{AB}$ et $\vecteur{AC}$ sont colinéaires ;
+    \item $\vecteur{AB}$ et $\vecteur{CD}$ sont colinéaires si et seulement si $\left( AB \right)$ et $\left( CD \right)$ sont parallèles.
+  \end{enumerate}
+\end{propriete}
+
+\columnbreak
+
+\begin{center}
+  \begin{tikzpicture}[thick]
+    \begin{scope}[xshift=1cm]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (3,1);
+      \coordinate (C) at (2,-.5);
+      \coordinate (D) at (5,.5);
+      \draw[-latex] (A) node[left]{$A$}
+      -- (B) node[above]{$B$};
+      \draw[-latex] (C) node[below]{$C$}
+      -- (D) node[right]{$D$};
+      \draw[dashed] (A) -- (C);
+      \draw[dashed] (B) -- (D);
+    \end{scope}
+
+    \begin{scope}[yshift=-1.5cm,xshift=3.5cm]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (3,1);
+      \coordinate (C) at (4,.5);
+      \draw (A) node[left]{$A$};
+      \draw (B) node[above]{$B$};
+      \draw (C) node[right]{$C$};
+      \draw[-latex] (A) -- (B);
+      \draw[-latex] (B) -- (C);
+      \draw[dashed] (A) -- (C);
+    \end{scope}
+
+    \begin{scope}[yshift=-3.5cm,xshift=.5cm]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (3,1);
+      \coordinate (I) at ($.5*(A)+.5*(B)$);
+      \coordinate (shift) at (.5,-.3);
+      \draw (A) node[above left]{$A$};
+      \draw (B) node[above right]{$B$};
+      \draw (I) node[above]{$I$};
+      \draw[-latex] (A) -- (I);
+      \draw[-latex] (I) -- (B);
+      \draw[-latex,dashed] ($(A) + (shift)$) -- ($(B) + (shift)$)
+      node[midway,below]{$\vecteur{AB}$};
+    \end{scope}
+
+    \begin{scope}[yshift=-5cm, xshift=2cm,yscale=.6]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (2,.5);
+      \coordinate (C) at (6,1.5);
+      \draw[-latex] (A) node[above]{$A$}
+      -- (B) node[above]{$B$};
+      \draw[-latex] (B)
+      -- (C) node[above]{$C$};
+    \end{scope}
+
+    \begin{scope}[yshift=-6.9cm, xshift=2cm]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (3,1);
+      \coordinate (D) at (2,-.5);
+      \coordinate (C) at (3.5,0);
+      \draw[-latex] (A) node[above]{$A$}
+      -- (B) node[above]{$B$};
+      \draw[-latex] (C) node[below right]{$C$}
+      -- (D) node[below]{$D$};
+    \end{scope}
+
+  \end{tikzpicture}
+\end{center}
+\end{multicols}
+
+\end{document}

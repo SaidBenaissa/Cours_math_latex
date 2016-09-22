@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+
+\usepackage[a4paper,margin=1.0cm]{geometry}
+\usepackage{savetrees}
+\usepackage{multicol}
+\usepackage{url}
+
+\usepackage{pablo-listings}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  Algorithmique
+
+  {\large
+    \textsc{Utilisation des boucles}
+  }
+
+  ------------------
+\end{center}
+
+\section*{Deviner un nombre}
+
+Écrire un programme qui :
+\begin{itemize}
+  \item choisit un nombre au hasard entre 0 et 100 ;
+  \item tant que l'utilisateur n'a pas deviné ce nombre, lui demande un nombre, et affiche \texttt{Trop haut} ou \texttt{Trop bas} suivant que sa proposition est supérieure ou inférieure au nombre recherché ;
+  \item affiche \texttt{Bravo} avant de terminer.
+\end{itemize}
+
+\section*{Algorithmes}
+
+Voici quatre versions de l'algorithme demandé. La première (langue naturelle)
+est une description en langue française. Les deux suivantes sont les programmes
+correspondants, pour calculatrices Casio ou TI. La dernière est le programme
+correspondant écrit en Python3 (logiciel installé sur les ordinateurs de
+l'école, téléchargeable librement sur \url{http://www.python.org}).
+
+Tout comme il y a plusieurs manières de résoudre un même problème mathématique,
+il y a plusieurs algorithmes résolvant le problème, et plusieurs programmes
+mettant en œuvre cet algorithme. Les solutions données ici ne sont qu'une
+possibilité parmi d'autres.
+
+\begin{multicols}{2}
+  \begin{minipage}{\textwidth}
+\subsection*{Langue naturelle}
+
+Choisir un nombre $A$ aléatoirement entre 0 et 100.\\
+Initialiser $X$ à $-1$.\\
+Tant que $A$ est différent de $X$, répéter :\\
+Demander un nombre $X$.\\
+Si $X$ est plus petit que $A$, afficher \verb+Trop petit+.\\
+Si $X$ est plus grand que $A$, afficher \verb+Trop grand+.\\
+Fin de la boucle.\\
+Afficher \verb+Bravo+.
+\end{minipage}
+
+\columnbreak
+
+  \section*{Calculatrice TI}
+\begin{lstlisting}[language=TI,frame=single]
+ent(100 * NbrAleat) -> A
+-1 -> X
+While A neq X
+Prompt X
+If X < A
+Then
+Disp "Trop petit"
+End
+If X > A
+Then
+Disp "Trop grand"
+End
+End
+Disp "Bravo"
+\end{lstlisting}
+\end{multicols}
+
+\begin{multicols}{2}
+\section*{Calculatrice Casio}
+\begin{lstlisting}[language=casio,frame=single]
+Int(100 * Ran#) -> A
+-1 -> X
+While A neq X
+? -> X
+If X < A
+Then
+"Trop petit"
+IfEnd
+If X > A
+Then
+"Trop grand"
+IfEnd
+WhileEnd
+"Bravo"
+\end{lstlisting}
+
+\columnbreak
+
+\section*{Python3}
+\begin{lstlisting}[language=python,frame=single]
+import random
+A = random.randint(1, 100)
+X = -1
+while A != X:
+    X = int(input("? "))
+    if X < A:
+        print("Trop petit")
+    if X > A:
+        print("Trop grand")
+print("Bravo")
+\end{lstlisting}
+\end{multicols}
+
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage{pablo-devoir}
+\usepackage{pablo-listings}
+\usepackage[a5paper]{geometry}
+
+\title{Lancer de dés et Échantillonnage}
+\date{8/01/15}
+\classe{2\up{de}14}
+\dsnum{}
+
+\newcommand\CR{\texttt{(CR)}}
+
+\begin{document}
+
+\maketitle
+
+\begin{em}
+  Un compte-rendu est attendu en fin de séance (sous forme papier, ou électronique), ainsi que l'algorithme que vous aurez écrit. Les réponses aux questions précédées d'un \CR{} doivent apparaitre sur le compte rendu.
+\end{em}
+
+On considère l'expérience aléatoire suivante : on lance deux dés à six faces, équilibrés, et on regarde si la somme des deux dés (que l'on appellera \emph{score} par la suite) est supérieure ou égale à 8.
+
+\section{Étude théorique}
+
+\begin{enumerate}
+  \item \CR{} Quelle est la probabilité $p$ d'obtenir un score supérieur ou égal à 8 ?
+  \item \CR{} On répète 40 fois cette expérience. Quelle est l'intervalle de fluctuation à 95\% ?
+  \item \CR{} On a lancé 40 fois deux dés qu'on suspecte d'être truqués, et on a obtenu 11 scores supérieurs ou égaux à 8. Peut-on en déduire qu'ils sont truqués ?
+\end{enumerate}
+
+\pagebreak
+
+\section{Simulation}
+
+Le but de cette partie est de vérifier que, dans 95\% des cas, la proportion de scores supérieurs ou égaux à 8 est incluse dans l'intervalle de définition.
+
+\begin{enumerate}
+  \item Recopier le programme suivant dans l'environnement Python,et exécutez le.
+
+    \CR{} À quoi sert-il ?
+
+    \begin{lstlisting}[language=python,frame=lines,mathescape=true]
+    from random import randint
+    from math import sqrt
+
+    n = 40
+
+    for i in range(n):
+      if randint(1, 6) + randint(1, 6) >= 8:
+        print "Au dessus de 8"
+      else:
+        print "En dessous de 8"
+    \end{lstlisting}
+
+  \item Modifier ce programme pour qu'il compte et affiche le nombre de scores au dessus de 8.
+
+    \CR{} Exécuter plusieurs fois ce nouveau programme, et écrire le résultat sur votre compte-rendu.
+  \item Modifier ce programme pour qu'il répète 100 fois cette simulation.
+  \item Modifier ce programme pour qu'il compte et affiche le nombre de simulations dont la fréquence de score au dessus de 8 soit dans l'intervalle de fluctuation.
+
+    \CR{} Exécuter plusieurs fois ce nouveau programme, et écrire le résultat sur votre compte-rendu.
+  \item \CR{} Exécuter plusieurs fois ce programme, et calculer la fréquence obtenue. Est-ce conforme avec les résultats vus en cours ?
+\end{enumerate}
+
+
+\end{document}

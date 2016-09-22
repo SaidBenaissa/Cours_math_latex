@@ -1,0 +1,191 @@
+\documentclass[14pt, aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{backgrounds}
+
+\institute{Lycée Marie Curie}
+\date{2014}
+\logo{}
+\title{Repérage dans le plan}
+
+\newcommand{\repere}{
+  \draw (0,0) coordinate (O)
+    node {$\bullet$}
+    node[below left] {$O$};
+  \draw (2,0) coordinate (I)
+    node {$\bullet$}
+    node[below] {$I$};
+  \draw ({sqrt(3)/2},.5) coordinate (J)
+    node {$\bullet$}
+    node[above left] {$J$};
+}
+\newenvironment{myrepere}[1][]{
+  \begin{center}
+    \begin{tikzpicture}[very thick,#1]
+  }{
+  \end{tikzpicture}
+\end{center}
+}
+
+\newcommand\A[1][]{
+  \node[#1] (A) at ({2+sqrt(3)}, 1) {$\bullet$};
+  \node[above right,#1] at (A) {$A$};
+}
+
+\begin{document}
+
+
+\section{Problème}
+\begin{frame}
+  \begin{myrepere}
+    \clip (-3, -2) rectangle (5, 4);
+    \repere;
+
+    \pause
+    \A[red];
+  \end{myrepere}
+\end{frame}
+
+\section{Cercles}
+\begin{frame}
+  \begin{myrepere}
+    \clip (-3, -2) rectangle (5, 4);
+    \repere;
+    \pause
+    \draw (O) circle (3.864);
+    \draw<2>[red] (O) -- ($(O) + (79:3.864)$) node[midway,left] {3,9};
+    \pause
+    \draw (I) circle (2);
+    \draw<3>[red] (I) -- ($(I) + (79:2)$) node[midway,left] {2};
+    \pause
+    \draw (J) circle (2.909);
+    \draw<4>[red] (J) -- ($(J) + (79:2.909)$) node[midway,left] {2,9};
+    \pause
+    \A[red];
+  \end{myrepere}
+
+  (
+  {\color<2>{red} 3,9};
+  {\color<3>{red} 2};
+  {\color<4>{red} 2,9}
+  )
+\end{frame}
+
+\section{Angles}
+\begin{frame}
+  \begin{myrepere}[scale=1.5]
+    \clip (-1, -1) rectangle (5, 4);
+    \repere;
+    \draw[blue] (I) -- (J);
+    \pause
+    {\color<2>{red} \draw[dashed] (I) -- ($(I) + ({180-23.794-126.206}:5)$);}
+    \begin{scope}
+      \path<2>[clip] ({2+sqrt(3)},1) -- (I) -- ($3*(J)-2*(I)$);
+      \draw<2>[red] (I) circle (.5);
+      \node<2> at ($(I)+(80:.7)$) {$126^o$};
+    \end{scope}
+    \pause
+    {\color<3>{red} \draw[dashed] (J) -- ($(J) + ({-23.794+33.690}:5)$);}
+    \begin{scope}
+      \path<3>[clip] ({2+sqrt(3)},1) -- (J) -- (I);
+      \draw<3>[red] (J) circle (.5);
+      \node<3> at ($(J)+(-4:1)$) {$34^o$};
+    \end{scope}
+    \pause
+    \A[red];
+  \end{myrepere}
+
+  (
+  {\color<2>{red} 126};
+  {\color<3>{red} 34}
+  )
+\end{frame}
+
+\section{Angle droit}
+\begin{frame}
+  \begin{myrepere}[scale=1.5]
+    \repere;
+    \pause
+    {\color<2>{red} \draw[dashed] (J) -- ($2.5*(I) - 1.5*(J)$);}
+    \pause
+    {\color<3>{red} \draw ($(I) + (-23.794:1.1814)$) coordinate (H) node{$\bullet$} node[below]{$H$};}
+    \path<3> (I) -- (H) node[red,midway,below]{1,2};
+    \pause
+    {\color<4>{red}
+    \draw[dashed] (H) -- ++({90-23.794}:2);
+    \draw[] ($(H) + ({90-23.794}:.2)$) -- ++({180-23.794}:.2) -- ++({-90-23.794}:.2);
+    }
+    \pause
+    \path<5> (H) -- ({2+sqrt(3)}, 1) node[red,midway,right]{1,6} node{$\bullet$};
+    \pause
+    \A[red];
+  \end{myrepere}
+
+  (
+  {\color<3>{red} 1,2};
+  {\color<5>{red} 1,6}
+  )
+\end{frame}
+
+\section{Coordonnées polaires}
+\begin{frame}
+  \begin{myrepere}[scale=1.5]
+    \clip (-1, -1) rectangle (4.5, 2);
+    \repere;
+    \pause
+    \draw[dashed] (O) -- ($2*(I)$);
+    \pause
+    \draw (O) circle (3.864);
+    \draw<3>[red] (O) -- ($(O) + (20:3.864)$) node[midway,left] {3,9};
+    \pause
+    {\color<4>{red} \draw[dashed] (O) -- ($(O) + (15:5)$);}
+    \begin{scope}
+      \path<4>[clip] ({2+sqrt(3)},1) -- (I) -- (O);
+      \draw<4>[red] (O) circle (.5);
+      \node<4> at ($(O)+(8:1.5)$) {$15^o$};
+    \end{scope}
+    \pause
+    \A[red];
+  \end{myrepere}
+
+  (
+  {\color<3>{red} 3,9};
+  {\color<4>{red} $15^o$}
+  )
+\end{frame}
+
+\section{Coordonnées cartésiennes}
+\begin{frame}
+  \begin{myrepere}[scale=1.5]
+    \clip (-1, -.9) rectangle (5, 1.7);
+    \repere;
+    \pause
+    {\color<2>{red}
+      \foreach \y in {-3, ..., 5} {
+        \draw[dashed] (-2, {.5*\y}) -- (6, {.5*\y});
+      }
+    }
+    \pause
+    {\color<3>{red}
+      \foreach \x in {-2, ..., 4} {
+        \draw[dashed] ($(O)-2*(J) + ({2*\x}, 0)$) -- ($(O)+4*(J) + ({2*\x},0)$);
+      }
+    }
+    \pause
+    {\color<4>{red} \draw (O) -- ++($1*(I)$) coordinate (H) node{$\bullet$};}
+    \pause
+    {\color<5>{red} \draw (H) -- ++($2*(J)$) node{$\bullet$};}
+    \pause
+    \A[red];
+  \end{myrepere}
+
+  (
+  {\color<4>{red} 1};
+  {\color<5>{red} 2}
+  )
+\end{frame}
+\end{document}

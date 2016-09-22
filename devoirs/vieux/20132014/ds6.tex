@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+
+\usepackage{pablo}
+\usepackage{pablo-listings}
+\usepackage[a5paper,margin=1.8cm]{geometry}
+\usepackage{multicol}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+  {\large
+    Devoir surveillé --- 1h
+
+    \textsc{Équations --- Repérage}
+  }
+\end{center}
+
+\begin{exercice}[(In)équations --- 3 points]~
+  \begin{enumerate}
+    \item Résoudre l'équation :
+          $\dfrac{2+x}{x-3}=0$
+    \item Résoudre l'inéquation :
+      $(2x-10)(x-1)\geq0$
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Développement, factorisation --- 6,5 points]~
+
+  Soit $A(x)=(x+1)^2-(x+1)(2x-4)$, avec $x\in{\mathbb R}$.
+  \begin{enumerate}
+    \item Développer, réduire et ordonner $A(x)$.
+    \item Factorise $A(x)$.
+    \item Choisir la forme la plus adaptée pour résoudre dans $\mathbb R$ les équations suivantes.
+
+      \begin{inparaenum}
+      \item $A(x)=0$
+        \hspace{\stretch{1}}
+      \item $A(x)=5$
+        \hspace{\stretch{1}}
+      \item $A(x)=(x+1)^2$
+      \end{inparaenum}
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Repérage --- 7 points]~
+
+  Soient les points $A(-1;1)$, $B(2;3)$, $C(4;2)$, $D(1;0)$.
+  \begin{enumerate}
+    \item Placer ces points dans un repère orthonormé.
+    \item On va déterminer de deux manières différentes la nature du quadrilatère $ABCD$.
+      \begin{description}
+        \item[(a) Première méthode] Calculer les coordonnées des vecteurs $\vecteur{AB}$ et $\vecteur{DC}$. En déduire la nature du quadrilatère $ABCD$.
+        \item[(b) Seconde méthode] Calculer les coordonnées du milieu du segment $AC$, et celles du milieu du segment $BD$. En déduire la nature du quadrilatère $ABCD$.
+      \end{description}
+    \item $ABCD$ est-il un losange ? Justifier (sans lecture graphique).
+  \end{enumerate}
+\end{exercice}
+
+\vfill\hfill
+\emph{Tourner la page.}
+\newpage
+
+\begin{exercice}[Repérage, algorithmique --- 3,5 points]~
+  \begin{enumerate}
+    \item Rappeler la formule permettant de calculer la longueur du segment $AB$, avec $A(x_A,y_A)$ et $B(x_B,y_B)$.
+    \item On considère l'algorithme suivant.
+      \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+      Lire $x_A$
+      Lire $y_A$
+      Lire $x_B$
+      Lire $y_B$
+      Lire $x_C$
+      Lire $y_C$
+      $\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}$ -> $AB$
+      $\sqrt{(x_C-x_A)^2+(y_C-y_A)^2}$ -> $AC$
+      $\sqrt{(x_C-x_B)^2+(y_C-y_B)^2}$ -> $BC$
+      Si $AB^2+AC^2=BC^2$
+      Alors
+        Afficher "Vrai"
+      Sinon
+        Afficher "Faux"
+      FinSi
+      \end{lstlisting}
+      \begin{enumerate}
+        \item Que fait cet algorithme ?
+        \item Modifier cet algorithme pour qu'il détermine si le triangle $ABC$ est isocèle en $A$.
+      \end{enumerate}
+  \end{enumerate}
+
+\end{exercice}
+
+\end{document}

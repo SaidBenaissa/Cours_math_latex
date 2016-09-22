@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+
+\PassOptionsToPackage{english}{babel}
+\usepackage{pablo}
+\selectlanguage{english}
+\usepackage{eurosym}
+\usepackage[a5paper,margin=1.5cm]{geometry}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+  {\large
+    Spreadsheet
+    ---
+    \textsc{Tour de France}
+  }
+\end{center}
+
+\noindent Open file : \texttt{tour\_de\_france\_2009.ods}.
+
+\noindent The spread sheet contains the winners of \emph{Tour de France} from 1903 to 2009, the distance that was run (km), their average speed (km/h), and some other information.
+
+
+
+\begin{question}[Using a spreadsheet to automate calculations]~
+
+  \begin{enumerate}
+      \setcounter{enumi}{-1}
+    \item Give the formula linking time and distance to speed.
+    \item What is the formula one have to write in cell $I3$ to calculate the race time in 1990 ?
+      Copy this formula down to $I98$, to get the race time of every Tour.
+    \item Choose the appropriate number format for column $I$, so that numbers are displayed using two decimals.
+    \item In cell $F99$, calculate the mean of cells from $F3$ to $F98$.
+    \item We call ``cumulative average speed since 1903'' the average speed an imaginary rider would have had if he had won every Tour since 1903.
+
+      For instance, to calculate the cumulative average speed in 2000, we divide the total distance of Tours since 1903 by the sum of the winners' race times.
+
+      Calculate, in column $J$, the cumulative average speeds since 1903.
+
+    \item Explain why results displayed in $F99$ and $J99$ are different.
+
+  \end{enumerate}
+\end{question}
+
+
+\begin{question}[Statistics]
+
+  In this part, the array we are studying is the list of average speeds (column $F$ of the spreadsheet).
+
+  \begin{enumerate}
+    \item Copy values from $F3$ to $F98$ to column $L$ (from $L3$ to $L98$), and sort this latter column $L$.
+
+    \item Fill column $M$ (ranks) with integers from 1 to 96, using a formula that will written once, then copied.
+
+    \item Fill cells $L102$ to $L106$, using formulas.
+
+    \item By analysing columns $L$ and $M$, find the minimum and maximum, the first and third quartiles, the median, and put these values in cells $M102$ to $M106$.
+
+  \end{enumerate}
+\end{question}
+
+\newpage
+
+\begin{center}
+  {\large
+    Spreadsheet
+    ---
+    \textsc{Optimisation}
+  }
+\end{center}
+
+\noindent Mrs Cocoa is the director of a supermarket. She buys chocolate boxes from a factory, at 5 \officialeuro{} per box.
+
+\noindent She sells these boxes in her store, at 13.60 \officialeuro{} each.
+She usually sells 3000 boxes a week.
+
+\noindent Mrs Cocoa orders a market study that shows that for each 10 cents discount, 100 more boxes a week are sold.
+
+\noindent We are going to help Mrs Cocoa to choose the retail price of one chocolate box, in order to maximize her benefit.
+
+Copy and complete the following array (all prices are in euros) on a spreadsheet, and decide on the discount Mrs Cocoa should offer to maximize her benefit.
+
+~
+
+{\small
+\noindent
+\hspace{-2em}
+\begin{tabular}{|l|l|l|l|l|l|}
+  \hline
+  Number of
+  & Retail price
+  & Number of
+  & 
+  & Total
+  & 
+  \\
+  discounts
+  & of one box
+  & boxes sold
+  & Receipt
+  & factory price
+  & Benefit
+  \\
+  \hline
+  0 & 13.60 & 3000 & & & \\
+  1 & 13.50 & 3100 & & & \\
+  \ldots & \ldots & \ldots & & & \\
+  \hline
+\end{tabular}
+}
+
+\end{document}

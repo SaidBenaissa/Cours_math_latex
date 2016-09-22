@@ -1,0 +1,59 @@
+\documentclass[12pt, aspectratio=43]{beamer}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{tikz}
+
+\useoutertheme{infolines}
+\usecolortheme{crane}
+
+\institute{Lycée Marie Curie}
+\date{2014}
+\logo{}
+\title{Généralités sur les fonctions}
+
+\begin{document}
+
+
+\section{Variations}
+\begin{frame}
+  Ce graphique représente l'altitude atteinte par des marcheurs en fonction de la distance parcourue, pendant une randonnée de 5~km.
+
+  \begin{enumerate}
+    \item Sur quelles parties du parcours les marcheurs montent-ils ? Sur quelles parties descendent-ils ?
+    \item Quelle est la plus haute altitude atteinte ? La plus basse ?
+    \item Quelle est l'altitude maximale atteinte pendant les deux premiers kilomètres ?
+    \item Dresser le \emph{tableau de variation} de l'altitude.
+  \end{enumerate}
+
+  \begin{tikzpicture}[ultra thick,xscale=2.2, yscale=.018]
+    \draw[dotted, gray, xstep=.5, ystep=50] (0, 200) grid (5, 400);
+    \draw[-latex] (0,200) -- (5.2,200);
+    \draw[-latex] (0,200) -- (0,420);
+    \foreach \x in {0, 1, ..., 5} {
+      \draw (\x,200) node[below]{\x};
+      \draw (\x,{200-10}) -- (\x,{200+10});
+    }
+    \foreach \y in {200, 300, ..., 400} {
+      \draw (0,\y) node[left]{\y};
+      \draw (-.1, \y) -- (.2, \y);
+    }
+    \draw [cyan] plot [smooth, tension=0.5] coordinates {
+      (0,250)
+      (.5, 270)
+      (1, 300)
+      (2, 280)
+      (3, 400)
+      (3.5, 350)
+      (4, 380)
+      (4.5, 280)
+      (5, 250)
+    };
+    \draw (.6,375)  node[fill=white, opacity=.8, text opacity=1]{Altitude (m)};
+    \draw (4.5,225) node[fill=white, opacity=.8, text opacity=1]{Distance (km)};
+  \end{tikzpicture}
+
+\end{frame}
+
+\end{document}

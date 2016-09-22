@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage[a6paper,landscape,margin=1.0cm]{geometry}
+
+\pagestyle{empty}
+\begin{document}
+
+%\begin{definition}
+%  L'\emph{intervalle de fluctuation} au seuil de 95\%, relatif aux
+%  échantillons de taille $n$, est l’intervalle centré autour de $p$,
+%  proportion du caractère dans la population, où se situe, avec une
+%  probabilité égale à $0,95$, la fréquence observée.
+%\end{definition}
+
+\begin{defprop}
+  Pour un échantillon de taille $n\geq25$, et une proportion $p$ du
+  caractère appartenant à $[0,2;0,8]$, la fréquence observée d'apparition d'un caractère dans l'échantillon appartient à l'\blanc{intervalle de fluctuation} \blanc{$\left[p-\frac{1}{\sqrt{n}};p+\frac{1}{\sqrt{n}}\right]$} avec une probabilité d'au moins \blanc{$0,95$}.
+\end{defprop}
+
+\begin{methode}[Prise de décision]
+  Étant donné un échantillon de taille $n\geq25$, on se demande s'il est compatible avec un modèle donné, où le caractère apparait avec une probabilité $p\in\left[ 0,2;0,8 \right]$. On note $f$ la fréquence d'apparition du caractère dans cet échantillon.
+  \begin{itemize}
+    \item Si $f\notin\left[ p-\frac{1}{\sqrt{n}};p+\frac{1}{\sqrt{n}} \right]$, \phantom{on peut rejeter l'hypothèse que l'échantillon soit compatible avec le modèle.}\\[1cm]
+    \item Si $f\in\left[ p-\frac{1}{\sqrt{n}};p+\frac{1}{\sqrt{n}} \right]$, \phantom{on ne peut pas rejeter l'hypothèse que l'échantillon soit compatible avec le modèle.}
+  \end{itemize}
+\end{methode}
+
+\end{document}

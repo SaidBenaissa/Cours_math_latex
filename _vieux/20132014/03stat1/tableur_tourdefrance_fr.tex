@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+
+\usepackage{pablo}
+\usepackage{eurosym}
+\usepackage[a5paper,margin=1.5cm]{geometry}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+  {\large
+    Tableur
+    ---
+    \textsc{Tour de France}
+  }
+\end{center}
+
+\noindent Ouvrir le fichier : \texttt{tour\_de\_france\_2009.ods}.
+
+\noindent La feuille de calcul présente pour les vainqueurs éditions du Tour de France de 1903 à 2009, la distance parcourue en km, et leur vitesse moyenne en km/h, avec d'autres informations.
+
+
+
+\begin{question}[Utilisation d’une feuille de calcul automatisée]~
+
+  \begin{enumerate}
+      \setcounter{enumi}{-1}
+    \item    Rappeler la formule donnant la vitesse en fonction de du temps et de la distance.
+    \item Quelle formule faut-il saisir en $I3$ pour calculer le temps de parcours du Tour 1990 ?
+      Recopier cette formule vers le bas jusqu'en $I98$, pour obtenir les temps de parcours de chaque Tour.
+
+    \item    Choisir pour les cellules de la colonne $I$ un format d’affichage « Nombre à 2 décimales ».
+
+    \item    A l’aide d’une formule, calculer en $F99$ la moyenne des valeurs des cellules $F3$ à $F98$.
+
+    \item    On appellera « vitesse moyenne cumulée depuis 2003 » la vitesse moyenne qu’aurait eue un coureur imaginaire qui aurait gagné tous les Tours depuis 1990.
+
+      Par exemple, pour calculer la vitesse moyenne cumulée en 2000, on divisera la distance totale des Tours de 1903 à 2000 par la somme des temps de parcours des vainqueurs.
+      Calculer dans la colonne $J$ les vitesses moyennes cumulées depuis 1903.
+
+    \item    Expliquer pourquoi les deux résultats affichés en $F99$ et $J99$ sont différents.
+
+  \end{enumerate}
+\end{question}
+
+
+\begin{question}[Statistiques]
+
+  Dans cette partie, la série statistique étudiée est la liste des vitesses moyennes (colonne $F$ du tableur).
+
+  \begin{enumerate}
+    \item    Recopier les valeurs de $F3$ à $F98$ en colonne $L$ de $L3$ à $L98$, puis ordonner les valeurs de la colonne $L$.
+
+    \item    Remplir la colonne $M$ (rang) avec les entiers de 1 à 96 en utilisant une formule de calcul qui sera recopiée.
+
+    \item    Remplir les cellules $L102$ à $L106$ en utilisant des formules tableur.
+
+    \item    En lisant les valeurs des colonnes $L$ et $M$, déterminer les valeurs minimales et maximales, la médiane et les quartiles, et placer ces résultats dans les cellules $M102$ à $M106$.
+
+  \end{enumerate}
+\end{question}
+
+\newpage
+
+\begin{center}
+  {\large
+    Tableur
+    ---
+    \textsc{Optimisation}
+  }
+\end{center}
+
+M. Choco est directeur d'un supermarché. Il achète, à une usine, des boîtes de chocolats au prix de 5 \officialeuro{} la boîte.
+
+\noindent Il revend ses boîtes dans son magasin à 13,60 \officialeuro{} la boîte.
+
+\noindent Habituellement, il en vend 3 000 par semaine.
+
+\noindent M. Choco réalise une étude de marché qui montre que toute baisse du prix de 10 centimes fait augmenter la vente de 100 boîtes par semaine.
+
+\noindent On veut aider M. Choco à fixer le prix de vente de la boîte de chocolats afin de réaliser un bénéfice maximum. 
+
+Réaliser et compléter le tableau suivant (où tous les prix sont en euros) sur une feuille de calcul, puis déterminer la réduction que doit faire M. Choco pour maximiser son bénéfice.
+
+~
+
+{\small
+\noindent
+\hspace{-2em}
+\begin{tabular}{|l|l|l|l|l|l|}
+  \hline
+  Nombre de
+  & Prix de vente
+  & Nombre de
+  & 
+  & Prix d'achat
+  & Bénéfice
+  \\
+  réductions
+  & d'une boîte
+  & boîtes vendues
+  & Recette
+  & total
+  & réalisé
+  \\
+  \hline
+  0 & 13,60 & 3000 & & & \\
+  1 & 13,50 & 3100 & & & \\
+  \ldots & \ldots & \ldots & & & \\
+  \hline
+\end{tabular}
+}
+
+\end{document}

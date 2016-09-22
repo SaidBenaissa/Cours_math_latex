@@ -1,0 +1,55 @@
+% Title: Demonstration sans parole : repere cartesien
+% Author: Jacques Duma
+% Site: http://math.et.info.free.fr/TikZ/index.html
+
+\documentclass{article}
+
+\usepackage[screen,margin=0cm]{geometry}
+\usepackage{calc}
+\usepackage{tikz}
+ \usetikzlibrary{calc}
+\usepackage{pablo}
+
+\begin{document} 
+
+\pagestyle{empty}
+
+% compteur auxiliaire pour le nombre de lignes 
+\newcounter{GrilleTriangulaire}
+% commande de tracé de la grille en environnement tikzpicture
+% \GrilleTriangulaire{<largeur>}{<hauteur>)}
+% <largeur> nombre d'hexagones en largeur
+% <hauteur> nombre d'hexagones en hauteur
+\newcommand{\GrilleTriangulaire}[2]{
+\clip ({-#1*sqrt(3)/2+1},-#2) rectangle ({sqrt(3)/2*#1},#2);
+\setcounter{GrilleTriangulaire}{\maxof{#1}{#2+#1/2}}
+% 3 balayages par des droites paralleles 
+\foreach \a in {-\theGrilleTriangulaire,...,\theGrilleTriangulaire}
+  \draw[dotted,shift={(-60:\a)}]
+    (-120:-\theGrilleTriangulaire)--(-120:\theGrilleTriangulaire);
+\foreach \a in {-\theGrilleTriangulaire,...,\theGrilleTriangulaire}
+  \draw[dotted,shift={(60:\a)}]
+    (120:-\theGrilleTriangulaire)--(120:\theGrilleTriangulaire);
+\foreach \a in {-\theGrilleTriangulaire,...,\theGrilleTriangulaire}
+\draw[dotted,shift={(0,{sqrt(3)*\a/2})}]
+    (-\theGrilleTriangulaire,0)--(\theGrilleTriangulaire,0);
+  }
+    
+\vfill
+
+\noindent\begin{tikzpicture}
+	\GrilleTriangulaire{14}{9}
+
+  \Large
+  \coordinate (i) at (1,0);
+  \coordinate (j) at (60:2);
+  \draw[thick,->,blue] (0,0)  node {$\times$} node[below left]{$O$};
+  \draw[thick,->,blue] (0,0) -- (i) node[midway,below]{$\vecteur\imath$};
+  \draw[thick,->,blue] (0,0) -- (j) node[midway,left]{$\vecteur\jmath$};
+  \draw[thick,blue] ($2*(i)-1/2*(j)$) node{$\times$} node[below left]{$A$};
+  \draw[thick,blue] ($-2*(i)$) node{$\times$} node[below left]{$B$};
+  \draw[thick,blue] ($2*(i)+(j)$) node{$\times$} node[below left]{$C$};
+  \draw[thick,blue] ($2*(j)$) node{$\times$} node[below left]{$D$};
+\end{tikzpicture}
+
+\end{document} 

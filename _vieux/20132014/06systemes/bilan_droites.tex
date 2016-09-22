@@ -1,0 +1,58 @@
+\documentclass[12pt]{book}
+
+\usepackage[a4paper,margin=0cm]{geometry}
+\usepackage{pablo}
+\usepackage{multirow}
+
+\pagestyle{empty}
+
+\newcommand{\repere}{
+  \begin{tikzpicture}[scale=0.55,baseline=1cm]
+    \draw[thin,gray] (-1.9,-1.9) grid (3.9,3.9);
+    \draw (-2,0) -- (4,0);
+    \draw (0,-2) -- (0,4);
+    \draw[thick,->] (0,0) -- (1,0) node[midway,below]{$\vecteur\imath$};
+    \draw[thick,->] (0,0) -- (0,1) node[midway,left]{$\vecteur\jmath$};
+  \end{tikzpicture}
+}
+\newcommand{\bilan}{
+\begin{tabular}{p{3cm}||c|c|c|c}
+  Équation de $d_1$ & $x=c_1$ & $y=ax+b$ & \multicolumn{2}{c}{$y=a_1x+b_1$} \\
+  \hline
+  Équation de $d_2$ & $x=c_2$ & $x=c$    & \multicolumn{2}{c}{$y=a_2x+b_2$} \\
+  \hline
+  \hline
+  \multirow{2}{3cm}{Position relative de $d_1$ et $d_2$} & \multirow{2}{*}{} & \multirow{2}{*}{} & $a_1=a_2$ & $a_1\neq a_2$ \\[4em]
+  &&& & \\
+  Représentation
+  &\repere
+  &\repere
+  &\repere
+  &\repere
+   \\
+\end{tabular}
+}
+
+\begin{document}
+
+~
+\vspace{\stretch{1}}
+
+\hspace{\stretch{1}}
+\bilan
+\hspace{\stretch{1}}
+
+\vspace{\stretch{2}}
+
+\hspace{\stretch{1}}
+\bilan
+\hspace{\stretch{1}}
+
+\vspace{\stretch{2}}
+
+\hspace{\stretch{1}}
+\bilan
+\hspace{\stretch{1}}
+
+\vspace{\stretch{1}}
+\end{document}

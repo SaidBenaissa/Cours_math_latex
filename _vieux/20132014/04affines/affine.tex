@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+
+\usepackage{pablo}
+\usepackage[a5paper,margin=1.9cm]{geometry}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}\large
+  \textsc{1 --- Fonctions affines et linéaires}
+\end{center}
+
+\begin{definition}
+  Une \emph{fonction affine} est une fonction qui s'écrit sous la forme \blanc{$x\mapsto
+  ax+b$} où $a$ et $b$ sont réels. Elle est définie sur \blanc{$\mathbb R$}.
+
+  Quand $b=0$, la fonction est de la forme $x\mapsto ax$, et on dit alors que
+  la fonction est \blanc{\emph{linéaire}}.
+\end{definition}
+
+\begin{propriete}
+  Soit $f:x\mapsto ax+b$ une fonction affine.
+  \begin{itemize}
+    \item si $a>0$, la fonction est \blanc{croissante} sur $\mathbb R$;
+    \item si $a=0$, la fonction est \blanc{constante} sur $\mathbb R$;
+    \item si $a<0$, la fonction est \blanc{décroissante} sur $\mathbb R$.
+  \end{itemize}
+\end{propriete}
+
+\subsection*{Représentation graphique}
+
+\begin{propriete}D'une manière générale, la courbe représentative d'une
+  fonction affine est une \blanc{droite}.
+
+  \begin{itemize}
+    \item Si la fonction est linéaire, cette droite passe par \blanc{l'origine du repère}.
+    \item Si la fonction est constante, cette droite est \blanc{parallèle à l'axe des abscisses}.
+    \end{itemize}
+\end{propriete}
+
+\begin{definition}Soit une fonction affine $f:x\mapsto ax+b$, et $\cal D$ sa courbe représentative.
+  \begin{itemize}
+    \item Le réel $a$ est appelé \blanc{\emph{coefficient directeur}}.
+    \item Le réel $b$ est appelé \blanc{\emph{ordonné à l'origine}}.
+  \end{itemize}
+\end{definition}
+
+\begin{propriete}
+  Soient $f:x\mapsto ax+b$ une fonction affine, $\cal D$ sa courbe
+  représentative, et $A(x_A,y_A)$ et $B(x_B,y_B)$ deux points de $D$. Alors
+  \blanc{$a=\frac{y_B-y_A}{x_B-x_A}$}.
+\end{propriete}
+
+\begin{methode}[Détermination de l'équation d'une fonction affine] Soit $f$ une fonction affine dont on connaît la représentation graphique $\cal D$.
+
+  Pour calculer $a$, on choisit deux points arbitraires $A$ et $B$ de $\cal
+  D$, et on calcule $a=\frac{y_B-y_A}{x_B-x_A}$.
+
+  Pour calculer $b$, on lit l'ordonnée à l'origine, c'est-à-dire l'ordonnée
+  du point d'intersection de $\cal D$ avec l'axe des ordonnées.
+\end{methode}
+
+\end{document}

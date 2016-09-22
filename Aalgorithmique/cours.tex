@@ -1,0 +1,226 @@
+\section{Algorithme}
+
+\begin{definition}
+  Un \emph{algorithme} est une suite finie d'opérations élémentaires permettant
+  de résoudre un problème donné.
+\end{definition}
+
+\begin{exemple}
+  \ldots
+\end{exemple}
+
+Trois parties (qui peuvent être mélangées) composent un algorithme :
+\begin{itemize}
+  \item entrée des données ;
+  \item traitement des données ;
+  \item sortie des résultats.
+\end{itemize}
+
+\section{Variables}
+
+\begin{definition}
+  Une \emph{variable} est un espace en mémoire, portant un nom, dans lequel on
+  peut stocker une valeur.
+\end{definition}
+
+L'instruction \texttt{a$\rightarrow$b} se lit \emph{affecter \texttt{a} à
+\texttt{b}}, et signifie : aller chercher en mémoire la valeur de \verb+a+, et
+placer cette valeur dans \verb+b+. D'autres notations possibles sont :
+  \texttt{b $\leftarrow$ a} (« \verb+b+ reçoit \verb+a+) ;
+  \texttt{Affecter a à b} ;
+  \texttt{a = b} ;
+  etc.
+
+
+\begin{exemple}~
+  \begin{center}
+  \begin{tabular}{p{8em}|cc}
+    Instructions & Contenu de $x$ & Contenu de $y$ \\
+    \hline
+    \emph{Début} &   &   \\
+    \texttt{3$\rightarrow$x} &   &  \\
+    \texttt{3x$^2$ + 2x$\rightarrow$y} &   & \\
+    \texttt{2y$\rightarrow$y} & &
+  \end{tabular}
+\end{center}
+\end{exemple}
+
+\section{Entrées / Sorties}
+
+Il est possible de demander à l'utilisateur d'affecter une valeur à une
+variable, avec une instruction du type \texttt{Lire a}. Le programme attend que
+l'utilisateur saisisse une valeur au clavier, puis place dans l'espace mémoire
+correspondant à \texttt{a} cette valeur.
+
+Il est possible d'afficher quelque chose à l'écran avec l'instruction
+\texttt{Afficher a}.
+
+\begin{exemple}Que fait l'algorithme suivant ?
+  \begin{lstlisting}[language=naturel,frame=lines]
+  Lire a
+  a * a -> a
+  Afficher a
+  \end{lstlisting}
+\end{exemple}
+
+\begin{multicols}{2}
+\begin{exercice}
+  Écrire un algorithme qui demande un nombre à l'utilisateur,
+  calcule l'image de ce nombre par la fonction $f:x\mapsto2x^2-1$, et affiche
+  ce rélultat.
+
+  ~
+
+  \hrule
+  \vspace{2cm}
+  \hrule
+\end{exercice}
+
+\columnbreak
+
+\begin{exercice}Que fait l'algorithme suivant ?
+  \begin{lstlisting}[language=naturel,frame=lines]
+  Lire n
+  n -> m
+  n + 3 -> n
+  n * 2 -> n
+  n + m -> n
+  n / 3 -> n
+  n - 2 -> n
+  Afficher n
+  \end{lstlisting}
+\end{exercice}
+\end{multicols}
+
+\section{Conditionnelles}
+
+\begin{definition}
+Pour résoudre certains problèmes, il est parfois nécessaire de faire un test
+pour savoir si on doit exécuter une tâche ou une autre. \emph{Si} le test est
+vrai, \emph{alors} on exécute une tâche, \emph{sinon} on exécute une autre
+tâche.
+\end{definition}
+
+\begin{multicols}{2}
+\begin{exemple}~
+
+  \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+    Afficher "Longueur des trois cotes."
+    Lire A
+    Lire B
+    Lire C
+    Si A = B et B = C
+    Alors
+      Afficher "Equilateral."
+    Sinon
+      Si A = B ou B = C ou A = C
+      Alors
+        Afficher "Isocele."
+      Sinon
+        Afficher "Scalene."
+      FinSi
+    FinSi
+  \end{lstlisting}
+\end{exemple}
+
+\columnbreak
+
+\begin{exercice}Que fait l'algorithme suivant ?
+  \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+    Lire x
+    Si x > 0
+    Alors
+      Afficher $\sqrt{\text{x}}$
+    Sinon
+      Afficher "Impossible"
+    FinSi
+  \end{lstlisting}
+
+  Corriger l'algorithme pour qu'il affiche un résultat correct lorsque
+  \texttt{x} vaut 0.
+\end{exercice}
+
+\begin{exercice}
+  Écrire un algorithme qui prend en entrée les coordonnées d'un point, et qui
+  affiche si ce point fait partie de la courbe représentative de la fonction
+  $f:x\mapsto\dfrac{x-2}{x+1}$ ou non.
+\end{exercice}
+\end{multicols}
+
+\section{Boucles}
+
+
+\begin{multicols}{2}
+Certains problèmes nécessitent de répeter un ensemble d'instructions plusieurs
+fois.
+
+Il existe deux types de boucles :
+\begin{itemize}
+  \item les boucles \texttt{Pour i allant de 1 à n} exécutent \texttt{n} fois la boucle, pour chacune des valeurs possibles de \texttt{i} ;
+  \item les boucles \texttt{While condition} exécutent la boucle tant que la condition n'est pas remplie.
+\end{itemize}
+
+  \begin{exemple}Affichage de la table de multiplication de 9.
+    \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+    Pour i allant de 1 a n
+    Faire
+      Afficher 9*i
+    FinPour
+    \end{lstlisting}
+  \end{exemple}
+
+  \columnbreak
+
+  \begin{exemple}Calcul de l'entier $n$ tel que la somme des entiers de 1 à $n$
+    fait 2016.
+    \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+    0 -> somme
+    0 -> n
+    Tant que somme < 2016
+    Faire
+      n + 1 -> n
+      somme + n -> n
+    FinTantque
+    Si somme = 2016
+    Alors
+      Afficher n
+    Sinon
+      Afficher "Impossible"
+    FinSi
+    \end{lstlisting}
+  \end{exemple}
+\end{multicols}
+
+\section{Exercices}
+
+\begin{exercice}
+  Écrire un algorithme qui prend en argument les longueurs des trois côtés d'un
+  triangle, et qui affiche si ce triangle est rectangle ou non.
+\end{exercice}
+
+\begin{exercice}
+  Un magasin offre 5\% de réduction sur le montant total d'un achat si celui-ci
+  est supérieur à 100~\euro. Écrire un algorithme qui lit en entrée le montant
+  total, et affiche le montant après l'éventuelle réduction.
+\end{exercice}
+
+\begin{exercice}
+  Une bactérie double sa population chaque jour. Écrire un algorithme qui
+  calcule la population de bactéries après trente jours, à partir d'une seule
+  bactérie au départ.
+\end{exercice}
+
+\begin{exercice}
+  Un enfant veut acheter un jeu à 245 \euro. Ses parents lui donnent un euro la
+  première semaine, deux euros la deuxième semaine, et ainsi de suite. Écrire
+  un algorithme qui calcule à partir de combien de semaine l'enfant va-t-il
+  pouvoir acheter son jeu ?
+\end{exercice}
+
+\begin{exercice}
+  On appelle \emph{parfait} un nombre qui est égal à la somme de ses diviseurs,
+  sauf lui même ($6 = 1 + 2 + 3$ est parfait ; $8 \neq 4 + 2 + 1$ n'est pas
+  parfait). Écrire un algorithme qui vérifie si un nombre est parfait. Écrire
+  un second algorithme qui cherche tous les nombres parfaits inférieurs à un
+  nombre donné.
+\end{exercice}

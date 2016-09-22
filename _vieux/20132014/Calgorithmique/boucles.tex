@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+
+\usepackage[a5paper,margin=1.0cm]{geometry}
+\usepackage{savetrees}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  Algorithmique
+
+  {\large
+    \textsc{Utilisation des boucles}
+  }
+
+  ------------------
+\end{center}
+
+\section*{Suite de Syracuse}
+
+Étant donné un nombre $A$, on calcule une suite de nombres (appelée
+\emph{suite de Syracuse}) de la manière suivante :
+\begin{itemize}
+  \item si $A$ est pair, on le divise par 2 ;
+  \item si $A$ est impair, on le multiplie par 3, puis on ajoute 1.
+\end{itemize}
+Puis on recommence avec le nouveau nombre obtenu.
+
+\begin{enumerate}
+  \item Calculer les dix premiers nombres de cette suite, avec 17 comme
+    nombre initial.
+  \item Écrire un programme \texttt{SYRACUSE} sur la calculatrice qui :
+    \begin{itemize}
+      \item demande à l'utilisateur deux nombres $A$ et $N$ ;
+      \item calcule les $N$ premiers éléments de la suite de Syracuse avec
+        $A$ comme nombre initial.
+    \end{itemize}
+    \item Faire plusieurs essais, et énoncer une conjecture concernant le
+      comportement de la suite.
+    \item Prouver cette conjecture.
+\end{enumerate}
+
+\section*{Deviner un nombre}
+
+Écrire un programme qui :
+\begin{itemize}
+  \item choisit un nombre au hasard entre 1 et 100 ;
+  \item tant que l'utilisateur n'a pas deviné ce nombre, lui demande un nombre, et affiche \texttt{Trop haut} ou \texttt{Trop bas} suivant que sa proposition est supérieure ou inférieure au nombre recherché ;
+  \item affiche \texttt{Bravo} avant de terminer.
+\end{itemize}
+
+\section*{Calcul du PGCD}
+
+\begin{enumerate}
+  \item Rappeler la définition du \textsc{pgcd}.
+  \item Rappeler, au choix, l'algorithme d'Euclide ou l'algorithme des
+    différences, utilisé pour calculer le \textsc{pgcd} de deux nombres.
+  \item Quel est le \textsc{pgcd} de 15 et 20 ? De 111 et 51 ?
+  \item Écrire un programme \texttt{PGCD} sur la calculatrice qui :
+    \begin{itemize}
+      \item demande à l'utilisateur deux nombres $A$ et $B$ ;
+      \item calcule le \textsc{pgcd} de $A$ et $B$ ;
+      \item affiche ce \textsc{pgcd}.
+    \end{itemize}
+  \item Exécuter ce programme pour calculer le \textsc{pgcd} de 15 et 20 ; de 111 et
+    51 ; de 1729 et 521.
+\end{enumerate}
+
+\end{document}

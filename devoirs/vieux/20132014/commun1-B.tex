@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exercice}{Exercice}
+
+\usepackage{tikz}
+\usepackage{multicol}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\setcounter{exercice}{3}
+\begin{exercice}~
+
+\begin{enumerate}
+  \item R\'esoudre les in\'equations suivantes, et donner les solutions \`a l'aide d'intervalles.
+    \begin{multicols}{2}
+      \begin{enumerate}
+        \item $4>x+5$
+        \item $2x+10\leq6$
+        \item $6(x+1)\geq x-3$
+        \item $6(x+1)\geq x-3$ et $4>x+5$
+        \item $6(x+1)\geq x-3$ ou $2x+10\leq6$
+        \item $4>x+5$ ou $2x+10\leq6$
+      \end{enumerate}
+    \end{multicols}
+
+  \item R\'epondre par vrai ou faux apr\`es avoir r\'esolu l'\'equation.
+    \begin{enumerate}
+      \item La solution de $\dfrac{2x+1}{5}=\dfrac{2x-1}{7}$ est un nombre entier naturel.
+      \item La solution de $2x-\dfrac{5-x}{2}=2$ est un nombre entier naturel.
+    \end{enumerate}
+
+  \item Est-il possible de construire la figure suivante, o\`u :
+      $ABCD$ et $AEFG$ sont des carr\'es ;
+      $AE=x$ ;
+      $CD=3x+4$ ;
+      $BE = 3$ ?
+    Justifiez votre r\'eponse.
+
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0,0) node[below left]{$A$}
+          -- (0,3) node[above left]{$B$}
+          -- (3,3) node[above right]{$C$}
+          -- (3,0) node[below right]{$D$}
+          -- cycle;
+
+        \draw (0,1) node[left]{$E$}
+          -- (1,1) node[above right]{$F$}
+          -- (1,0) node[below]{$G$};
+      \end{tikzpicture}
+    \end{center}
+
+  \item Pour organiser le devoir commun de secondes, les professeurs de
+    math\'ematiques doivent r\'epartir les \'el\`eves dans des salles de classe
+    identiques. S'ils utilisent huit salles, il y aura sept places libres dans
+    chaque salle. S'ils utilisaient quatre salles, il manquerait 72 places.
+
+    On appelle $s$ le nombre de places des salles, et $n$ le nombre total d'\'el\`eves.
+
+    Quelle est le nombre de places par salle ?
+
+\end{enumerate}
+\end{exercice}
+
+\end{document}

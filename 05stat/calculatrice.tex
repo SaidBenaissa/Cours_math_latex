@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+\usepackage{pablo}
+\usepackage{multicol}
+\usepackage[a5paper,margin=1.5cm]{geometry}
+
+\newcommand{\cell}[1]{\texttt{#1}}
+\newcommand{\touche}[1]{\framebox{#1}}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+  \large
+  Utilisation de la calculatrice
+
+  ~
+  \hrule
+\end{center}
+
+\begin{exercice}[Utilisation de la calculatrice]
+  Le but de l'exercice est de calculer, à la calculatrice, les indicateurs (médiane, quartiles, écart interquartile, moyenne, valeurs extrêmes, etc.) des deux séries suivantes.
+  \begin{enumerate}[(a)]
+    \item 13, 7, 24, 20, 12, 14, 15, 15, 10, 22, 5, 6
+    \item \begin{tabular}{l|c|c|c|c|c|c|c|c|c}
+        Valeurs & 5 & 7 & 13 & 14 & 15 & 18 & 19 & 22 & 23 \\
+        \hline
+        Effectifs & 1 & 2 & 2 & 6 & 7 & 10 & 32 & 2 & 3 \\
+      \end{tabular}
+  \end{enumerate}
+    
+  \begin{enumerate}[{Série} (a)]
+    \item \begin{enumerate}[1.]
+        \item Entrer la liste des valeurs : \touche{Stat} \touche{Edite}, puis rentrer les valeurs dans la colonne $L_1$.
+        \item Retourner dans la fenêtre principale : \touche{2nde} \touche{Quitter}.
+        \item Utiliser la fonction \texttt{Stats 1-Var} sur la liste : \touche{Stats} \touche{CALC} \touche{Stats 1-Var}, puis mettre la liste en argument : \touche{2nde} \touche{$L_1$}.
+        \item Déterminer les : moyenne, minimum et maximum, premier et troisième quartile, médiane.
+      \end{enumerate}
+    \item \begin{enumerate}[1.]
+        \item Entrer la liste des valeurs et celle des effectifs : \touche{Stat} \touche{Edite}, puis rentrer les valeurs dans les colonnes $L_1$ et $L_2$.
+        \item Utiliser la même fonction \texttt{Stats 1-Var} avec les arguments \touche{$L_1$} et \touche{$L_2$} : suivant le modèle, il faudra soit les mettre sur deux lignes différentes, soit les séparer par une virguale \touche{,}.
+        \item Déterminer les mêmes indicateurs qu'à la question précédente.
+      \end{enumerate}
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Application]
+    Deux sportifs Benjamin et Mathilde s'entraînent pour courir un cent mètre. Voici leurs temps (en secondes) aux entraînements.
+
+    \begin{itemize}
+      \item 
+        Benjamin
+        ; 11,2
+        ; 14
+        ; 15,5
+        ; 12,3
+        ; 14
+        ; 16,2
+        ; 17
+        ; 15,4
+        ; 12,5
+        ; 13,2.
+      \item 
+        Mathilde
+        ; 12,8
+        ; 15
+        ; 13,3
+        ; 13,7
+        ; 14,6
+        ; 14,4
+        ; 14,5
+        ; 13,6
+        ; 14,1
+        ; 13,6
+    \end{itemize}
+
+  \begin{enumerate}
+    \item Calculer la médiane et l'écart interquartile pour chacune des séries.
+    \item Comparer les deux séries.
+  \end{enumerate}
+\end{exercice}
+
+\end{document}

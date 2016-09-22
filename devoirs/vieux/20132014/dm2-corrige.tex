@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+
+\usepackage{pablo}
+\usepackage{pablo-listings}
+\usepackage[a5paper,margin=1.3cm]{geometry}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{framed}
+
+\pagestyle{empty}
+\begin{document}
+
+  \section*{Devoir à la maison --- Correction}
+  \emph{Rendu le vendredi 8 novembre}
+  \setcounter{exercice}{0}
+
+  \begin{exercice}[Vecteurs] Exercice 90 page 178.
+
+
+    \begin{enumerate}[a.]
+      \item \emph{Montrer que $\vecteur{BI}=\vecteur{KD}$.}
+
+        Cette égalité fait intervenir le point $I$, à propos duquel la seule
+        information que nous ayons est que c'est le symétrique de $A$ par
+        rapport à $B$.  Donc $B$ est le milieu du segment $[AI]$, et
+        $\vecteur{AB}=\vecteur{BI}$.
+
+        Pour les mêmes raisons, $\vecteur{KD}=\vecteur{DC}$.
+
+        Enfin, $ABCD$ étant un parallélogramme, $\vecteur{DC}=\vecteur{AB}$.
+
+        Pour conclure : $\vecteur{BI}=\vecteur{AB}=\vecteur{DC}=\vecteur{KD}$.
+
+        ~
+
+        \emph{En déduire que $O$ est le milieu de $[BI]$.}
+
+        Puisque $\vecteur{BI}=\vecteur{KD}$, $BIDK$ est un parallélogramme,
+        donc ses diagonales $[BD]$ et $[KI]$ se coupent en leur milieu. Le
+        point $O$ étant le milieu de $[BD]$, c'est aussi le milieu de $[IK]$.
+
+      \item On utilise la même méthode pour montrer que $O$ est le milieu de $[JC]$.
+
+      \item Nous venons de démontrer que les deux diagonales du quadrilatère $IJKL$ se coupent en leurs milieux. C'est donc un parallélogramme.
+  \end{enumerate}
+  \end{exercice}
+
+  \begin{exercice}[Algorithmique]~
+    \emph{Corrigé en classe.}
+  \end{exercice}
+
+  \begin{exercice}[Statistiques]~
+    \begin{enumerate}[(1)]
+      \item
+
+        \emph{D'après le tableau de fréquences, peut-on dire que les voyelles sont plus utilisées que les consonnes dans la langue française ?}
+
+        Ormi \emph{y}, la voyelle la moins utilisées est \emph{o} (5,2\%).
+        Seules cinq consonnes sur 19 \emph{(l, n, r, s, t)} sont utilisées
+        davantage. On peut donc dire que les voyelles sont plus utilisées que
+        les consonnes.
+
+        D'un autre côté, la somme des fréquences des voyelles est 43,73\%, soit
+        moins de la moitié. De ce point de vue là, les voyelles apparaissent
+        moins souvent  que les consonnes.
+
+        La question est donc mal formulée : suivant l'interprétation, la
+        réponse est différente.
+
+
+      \item Voici les trois premiers vers d'un poème d'Omar Khayyam
+        (mathématicien perse) contenant 132 lettres.
+
+        \begin{tabular}{|l}
+          Ma venue ne fut d'aucun profit pour la sphère céleste\\
+          Mon départ ne diminuera ni sa beauté ni sa grandeur\\
+          Mes deux oreilles n'ont jamais entendu dire par personne\\
+        \end{tabular}
+
+        \begin{enumerate}[(a)]
+          \item Le \emph{e} a une fréquence d'apparition de 17,69\%. Il devrait donc apparaître environ $132\times17,69\div100=23,4$ fois. Le \emph{z} devrait apparaître $132\times 0,12\div100=0,2$ fois.
+          \item Le poème contient 23 \emph{e} (avec ou sans accents), et aucun \emph{z}.
+          \item La fréquence d'apparition des lettres dans le poème correspond aux fréquences calculées dans le tableau.
+        \end{enumerate}
+
+      \item \emph{Chiffre de César : \og{}VO ZYEBAEYS NO MODDO FOXEO OD MOVES NO MO NOZKBD\fg}
+
+        \begin{enumerate}[(a)]
+          \item Voici un tableau présentant l'effectif, l'effectif total et la fréquence des lettres du vers codé (les lettres non représentées n'apparaissent pas).
+
+            \hspace{-0.6cm}\begin{tabular}{c|cccccccc}
+          Lettre     & a & b & d & e & f & k & m & n \\
+              \hline
+          Effectif   & 1 & 2 & 4 & 4 & 1 & 1 & 3 & 3 \\
+          Fréquence (\%) & 2,6 & 5,3 & 10,5 & 10,5 & 2,6 & 2,6 & 7,9 & 7,9 \\
+        \end{tabular}
+
+        \hspace{-0.6cm}\begin{tabular}{c|cccccc|c}
+          Lettre     & o & s & v & x & y & z & Total\\
+          \hline
+          Effectif   & 11&2 & 2 & 1 & 2 & 1 &  38  \\
+          Fréquence (\%) & 28,9&5,3 & 5,3 & 2,6 & 5,3 & 2,6 & 100
+        \end{tabular}
+
+          \item La lettre $o$ est celle qui apparait le plus souvent. Il est
+            donc probable qu'elle code la lettre $e$. Dans ce cas, les
+            lettres $o$, $p$, $q$, etc. codent, respectivement, les lettres
+            $f$, $g$, $h$, etc. Le vers décodé donne donc 
+
+        \begin{tabular}{|l}
+          Le pourquoi de cette venue et celui de ce départ
+        \end{tabular}
+      \item \emph{N DHRYYR RCBDHR N IRPH BZNE XUNLLNZ ?}
+        En utilisant la même méthode, on trouve que les lettres les plus représentées sont les lettres $r$ et $n$. Il est donc probable que l'une de ces lettres code la lettre $e$.
+
+        \begin{itemize}
+          \item Si $n$ code le $e$, alors $n$, $o$, $p$, etc. codent les $e$, $f$, $g$ et la phrase devient : \og{}E UYIPPI ITSUYI E ZIGY SQEV OLECCEQ\fg, ce qui ne signifie pas grand'chose.
+          \item Si $r$ code le $e$, alors $r$, $s$, $t$, etc. codent les $e$, $f$, $g$ et la phrase devient : \og{}A QUELLE EPOQUE A VECU OMAR KHAYYAM\fg. La réponse est aux alentours de 1100 (né en 1048, mort en 1131).
+        \end{itemize}
+        \end{enumerate}
+
+
+    \end{enumerate}
+  \end{exercice}
+
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage{pablo}
+\usepackage[a5paper,margin=1cm]{geometry}
+\usepackage{savetrees}
+
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\setcounter{nth-gaps}{1}
+\setcounter{section}{2}
+
+\section{Indicateurs d'une série statistique}
+
+\begin{definition}[Moyenne]
+  La moyenne d'une série de caractères $x_1, x_2, \ldots x_k$ et d'effectifs $n_1, n_2 \ldots n_k$ est la valeur notée $\bar x$ valant :
+  %\[{\bar x}=\dfrac{n_1x_1+n_2x_2+\ldots+n_kx_k}{n_1+n_2+\ldots+n_k}.\]
+
+  \blanc{formule de la moyenne}
+\end{definition}
+
+\begin{definition}[Médiane]
+  La médiane d'une série est une valeur $m$ telle que la moitié des effectifs étudiés ait une valeur inférieure ou égale à $m$, et l'autre moité ait une valeur supérieure ou égale.
+\end{definition}
+
+\begin{remarque}
+  La moyenne et la médiane sont des indicateurs de \blanc{position}.
+\end{remarque}
+
+\begin{definition}[Quartiles]~
+  \begin{itemize}
+    \item Le premier quartile d'une série est la plus petite valeur telle qu'au moins $25\%$ des valeurs lui soit inférieure ou égale.
+    \item Le troisième quartile d'une série est la plus petite valeur telle qu'au moins $75\%$ des valeurs lui soit inférieure ou égale.
+  \end{itemize}
+\end{definition}
+
+\begin{remarque}
+  Les quartiles sont des indicateurs de \blanc{dispersion}
+\end{remarque}
+
+\subsection*{Méthode}
+\subsubsection*{Calcul de la médiane}
+On commence par trier les caractères par ordre croissant.
+\begin{itemize}
+  \item Si la série étudiée a un effectif $N$ impair, la médiane est la valeur du caractère numéroté $\frac{N+1}{2}$.
+  \item Si la série étudiée a un effectif $N$ pair, la médiane est la moyenne des caractères numérotés $\frac{N}{2}$ et $\frac{N}{2}+1$.
+\end{itemize}
+
+\subsubsection*{Calcul des quartiles}
+
+On trie les effectifs par ordre croissant, et on applique la définition.
+
+\subsection*{Exemple}
+
+Calculer la médiane et les quartiles des salaires des entreprises A et B.
+
+  A :
+  \begin{tabular}{r|c|c|c|c|c|c|c}
+    Salaire  & 1450 & 1500 & 1550 & 1600 & 1650 & 1700 & 1750 \\
+    \hline
+    Effectif & 5    &  2   &  5   &  7   &  3   &  6   & 7    \\
+  \end{tabular}
+
+  \vspace{\stretch{1}}
+
+  B :
+  \begin{tabular}{r|c|c|c|c|c|c|c}
+    Salaire  & 1450 & 1460 & 1470 & 1580 & 1600 & 2000 & 5000 \\
+    \hline
+    Effectif & 8    &  2   & 15   &  2   &  5   &  2   & 1    \\
+  \end{tabular}
+
+  \vspace{\stretch{1}}
+
+\end{document}

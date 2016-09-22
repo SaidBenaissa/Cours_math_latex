@@ -1,0 +1,17 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage[paperwidth=210mm,paperheight=37.125mm,margin=0cm]{geometry}
+
+\begin{document}
+
+  \vspace*{\stretch{1}}%
+  \hspace*{\stretch{1}}%
+\begin{tikzpicture}
+  \foreach \i in {0, ..., 4}{
+    \draw ({4*\i}, 0) -- ++(3, 0) -- ++(0, 3) -- ++(-3, 0) -- cycle;}
+\end{tikzpicture}%
+  \hspace*{\stretch{1}}%
+  \vspace*{\stretch{1}}
+
+\end{document}

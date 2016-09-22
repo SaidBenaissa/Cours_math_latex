@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+
+\usepackage{pablo}
+\usepackage{pablo-listings}
+\usepackage{multicol}
+\usepackage[a5paper,margin=2cm]{geometry}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  \textsc{Devoir}
+
+  Probabilités --- Fonction inverse --- Échantillonnage
+\end{center}
+\hrule
+
+\begin{exercice}[Probabilités --- 5 points]
+  On considère un jeu de 32 cartes (rappel : un jeu de 32 cartes est composé de chacune des cartes 7, 8, 9, 10, valet, dame, roi, As dans chacune des quatre couleurs pique, cœur, carreau, trèfle).
+  \begin{enumerate}
+    \item On tire une carte au hasard. Quelle est la probabilité de tirer un As ?
+    \item On tire deux cartes au hasard, sans remise, et on s'intéresse aux As tirés.
+      \begin{enumerate}
+        \item Représenter cette expérience par un arbre.
+        \item Quelle est la probabilité de tirer deux As ?
+        \item Quelle est la probabilité de tirer exactement un As ?
+      \end{enumerate}
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Échantillonnage --- 6 points]~
+
+  \noindent\emph{Les deux premières questions sont indépendantes.}
+
+  Travaillant dans un laboratoire de contrôle pharmaceutique, vous êtes chargé(e) d'étudier deux traitements $A$ et $B$, censés guérir une certaine maladie, pour autoriser ou non leur vente. On sait que 30\% des malades guérissent spontanément (c'est-à-dire sans médicament) en moins d'une semaine. La question à laquelle vous devez répondre est : Ces médicaments permettent-ils une guérison plus rapide ?
+
+  \begin{enumerate}
+    \item Testé auprès de 30 personnes, le traitement $A$ en a guéri 17 en moins d'une semaine. On note $p_A$ la proportion théorique de malades guérissant en moins d'une semaine avec le médicament $A$.
+      \begin{enumerate}
+        \item Déterminer un intervalle de confiance à 95~\% de $p_A$, donné par la formule $\left[f-\frac{1}{\sqrt{n}};f+\frac{1}{\sqrt{n}}\right]$, où $f$ est la fréquence des guérisons de l'échantillon en moins d'une semaine, et $n$ la taille de l'échantillon.
+        \item Pouvez-vous affirmer que ce médicament accélère le temps de guérison ? Justifier.
+      \end{enumerate}
+    \item Un intervalle de confiance à 95~\% de la proportion $p_B$ de guérisons en moins d'une semaine avec le traitement $B$ est $\left[0,27;0,41\right]$. Pouvez-vous affirmer que ce traitement accélère la guérison ?
+    \item Parmi ces deux médicaments, le(s)quel(s) autoriseriez-vous à la vente ?
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Tableau de signes --- 3 points]
+  Résoudre l'inéquation suivante en utilisant un tableau de signes.
+
+  \[\frac{2x-3}{5-x}<0\]
+\end{exercice}
+
+\begin{exercice}[Algorithmique --- 6 points]~
+
+  On considère l'algorithme suivant.
+  \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+  Lire x
+  Si (2x-7)/(3-x) > 0
+  Alors
+    Afficher "Vrai"
+  Sinon
+    Afficher "Faux"
+  FinSi
+  \end{lstlisting}
+  \begin{enumerate}
+    \item Faire fonctionner cet algorithme avec $x=0$, $x=2$, $x=6$. À quoi sert-il ?
+    \item Faire fonctionner cet algorithme avec $x=3$. Que se passe-t-il ?
+    \item Corriger l'algorithme pour qu'il produise un résultat cohérent avec $x=3$.
+  \end{enumerate}
+\end{exercice}
+
+\end{document}
+

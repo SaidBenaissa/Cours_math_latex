@@ -1,0 +1,75 @@
+\documentclass[12]{article}
+
+\usepackage[a4paper]{geometry}
+\usepackage{pablo}
+
+\newcommand\croissance{\setcounter{nth-gaps}{1}
+
+  \paragraph{Définition}
+  Soit $I$ un intervalle de $\mathbb R$, et $f$ une fonction définie sur $I$.
+  \begin{itemize}
+    \item $f$ est dite \blanc{strictement   croissante} sur $I$ si pour tous
+      réels $a$ et $b$ de $I$ tels que $a<b$, alors \blanc{$f(a)<f(b)$}.
+    \item $f$ est dite \blanc{strictement décroissante} sur $I$ si pour tous
+      réels $a$ et $b$ de $I$ tels que $a<b$, alors \blanc{$f(a)<f(b)$}.
+  \end{itemize}
+
+  \paragraph{Remarque}
+  Graphiquement, la courbe représentative d'une fonction croissante
+  \blanc{monte}, tandis que celle d'une fonction décroissante \blanc{descend}.
+
+  \paragraph{Exemples}
+  Montrons que la fonction $f:x\mapsto 3x-1$ est croissante, et que la fonction
+  $g:x\mapsto -2x+1$ est décroissante.
+}
+
+\newcommand\minimax{\setcounter{nth-gaps}{1}
+  \paragraph{Définition}
+  Soit $I$ un intervalle de $\mathbb R$, $f$ une fonction définie sur $I$, et
+  $a$ un élément de $I$.
+  \begin{itemize}
+    \item Si pour tout $x\in I$, $f(x)\leq f(a)$, on dit que $f(a)$ est le
+      \blanc{maximum} de $f$ sur $I$, atteint en $a$.
+    \item Si pour tout $x\in I$, $f(x)\geq f(a)$, on dit que $f(a)$ est le
+      \blanc{minimum} de $f$ sur $I$, atteint en $a$.
+  \end{itemize}
+
+  \paragraph{Exemple}~
+
+  \begin{tikzpicture}[domain=-3:2.5, scale=0.7]
+    \draw[very thin,color=gray,step=1] (-1.5,-0.25) grid (2.5,4.5);
+    \draw[->] (-1.5,0) -- (2.5,0);
+    \draw (1,0) node[below right] {1};
+    \draw[->] (0,-0.25) -- (0,4.5);
+    \draw (0,1) node[below right] {1};
+    \draw (0,0) node[below left] {0};
+    \draw[color=blue,domain=-1:2]
+    plot (\x,{-(\x-3)*(\x+1)});
+    \draw (3,1.5) node {${\cal C}_f$};
+  \end{tikzpicture}
+
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\croissance
+\vspace{\stretch{1}}
+\croissance
+\vspace{\stretch{1}}
+\croissance
+\vspace{\stretch{1}}
+\croissance
+
+\pagebreak
+
+\minimax
+\vspace{\stretch{1}}
+\minimax
+\vspace{\stretch{1}}
+\minimax
+\vspace{\stretch{1}}
+\minimax
+
+
+\end{document}

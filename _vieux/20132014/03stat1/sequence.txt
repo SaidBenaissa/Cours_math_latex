@@ -1,0 +1,96 @@
+==== Cette semaine ====
+
+# Activité d'introduction : Savoir de quoi on parle (1/2h)
+
+Introduction : Lecture d'un article de journal, parlant de statistiques
+(sondage par exemple).
+
+=> Interrogation sur le sens des chiffres vus : 22% signifie 22 quoi par
+rapport à quoi ? Approche des notions de population, caractère, etc.
+
+# Cours (1h)
+
+1. Vocabulaire : Population, série, caractère (quantitatif ou qualitatif),
+effectifs, fréquence, effectif cumulé croissant.
+
+2. Représentations graphiques
+
+==== Vacances ====
+
+# DM
+
+À faire pour la rentrée, contenant un exercice faisant manipuler les notions de
+fréquence, et un peu de vocabulaire associé.
+
+Je pense à un exercice sur les fréquences d'apparition des lettres dans un
+texte en français, et comment on peut utiliser ça pour déchiffrer un texte
+écrit en utilisant le chiffre de César.
+
+==== Rentrée ====
+
+# Exercices
+
+Manipulation du vocabulaire, et des représentations graphiques.
+
+# Activité d'introduction aux indicateurs de position et de dispersion
+
+1. Moyenne
+
+Il faut que je trouve de quoi parler précisément, mais il s'agit de leur
+demander de comparer deux séries statistiques (qui ont à peu près même
+moyenne, mais un écart-type élevé).
+
+=> La moyenne donne une information, mais « on voit » que les séries ne sont
+pas similaires pour autant. => Nécessité d'un indicateur de dispersion.
+
+2. Médiane et quartiles
+
+Idem, mais la médiane et les quartiles nous permettent de comparer précisément
+les deux séries (hétérogénéité d'une classe, par exemple).
+
+# Cours
+
+Moyenne, médiane et quartile : définition, et comment les calculer.
+
+# Exercices
+
+Application directe
+
+Problèmes plus compliqués.
+
+=== En parallèle ===
+
+# Une séance en demi groupe sur l'utilisation de la calculatrice.
+
+But : Savoir calculer la moyenne, la médiane et les quartiles d'une série
+(voire, si le temps le permet, tracer des graphiques).
+
+# Une séance en demi groupe sur l'utilisation du tableur
+
+But : Manipuler le tableur (c'est encore vague...)
+
+
+=== Évaluation ===
+
+# Le DM pendant les vacances dont j'ai parlé plus haut
+
+# Devoir
+
+Au bout d'une semaine et demi, devoir d'une heure, dont une moitié au moins sur
+ce chapitre. Permettra déjà d'évaluer :
+
+- le vocabulaire ;
+- les représentations graphiques ;
+- des applications directes sur les médianes et moyennes (le cours sera plus
+  récent).
+
+# DM
+
+Un DM donné à la fin du chapitre permettra d'aborder des exercices plus
+difficiles.
+
+# Devoir
+
+Un problème concernera ce chapitre dans le devoir suivant (une semaine et demi
+après la fin de ce chapitre).
+

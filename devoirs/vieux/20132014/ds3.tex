@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+
+\usepackage{pablo}
+\usepackage[a5paper,margin=1.2cm]{geometry}
+\usepackage{enumerate}
+
+\usepackage{multicol}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+  {\large
+    Devoir surveillé
+    ---
+    \textsc{Vecteurs}
+  }
+\end{center}
+
+\begin{exercice}[Relation de Chasles --- 3 points] Exprimer le plus
+  simplement possible les sommes de vecteurs suivants :
+  \begin{multicols}{2}
+    \begin{enumerate}[(a)]
+      \item $\vecteur{AB}+\vecteur{BC}$
+      \item $\vecteur{EF}+\vecteur{AE}-\vecteur{AF}$
+      \item $\vecteur{AB}+\vecteur{CA}-\vecteur{DB}-\vecteur{CD}$
+      \item $2\vecteur{DB}+\vecteur{BD}-\vecteur{AB}$
+    \end{enumerate}
+  \end{multicols}
+\end{exercice}
+
+\begin{exercice}[2 points]
+  Exprimer les vecteur $\vecteur u$ et $\vecteur v$ en fonction des vecteurs
+  $\vecteur a$ et $\vecteur b$.
+
+  \begin{multicols}{2}
+    \begin{enumerate}[(a)]
+      \item
+
+        \tikzstyle{vecteur}=[thick]
+        \begin{tikzpicture}[baseline=(current bounding box.north),scale=0.7]
+          \draw[thin,color=gray,step=1] (-1,-1) grid (3,4);
+          \draw[vecteur,->] (0,0) -- (2,0);
+          \draw[vecteur,->] (0,0) -- (0,1);
+          \draw[vecteur,->] (0,0) -- (2,3);
+          \draw (0,0.5) node[left] {$\vecteur{a}$};
+          \draw (1.5,0) node[below] {$\vecteur{b}$};
+          \draw (1.5,1.5) node[] {$\vecteur{u}$};
+        \end{tikzpicture}
+
+      \item
+        \begin{tikzpicture}[baseline=(current bounding box.north),scale=0.7]
+          \draw[thin,color=gray,step=1] (-1,-3) grid (6,2);
+          \draw[vecteur,->] (0,0) -- (2,0);
+          \draw[vecteur,->] (0,0) -- (0,1);
+          \draw[vecteur,->] (0,0) -- (5,-2);
+          \draw (0,0.5) node[left] {$\vecteur{a}$};
+          \draw (1.5,0) node[above] {$\vecteur{b}$};
+          \draw (2.5,-1.5) node[] {$\vecteur{v}$};
+        \end{tikzpicture}
+    \end{enumerate}
+  \end{multicols}
+
+\end{exercice}
+
+\begin{exercice}[5 points]
+  Soit $ABCD$ un quadrilatère quelconque, et $I$, $J$, $K$, $L$ les milieux respectifs des segments $[AB]$, $[BC]$, $[CD]$, et $[DA]$.
+  \begin{enumerate}[(a)]
+    \item Sur une figure, placer quatre points $A$, $B$, $C$ et $D$ au
+      hasard, et placer les points $I$, $J$, $K$ et $L$ en fonction de $A$,
+      $B$, $C$ et $D$. Tracer les quadrilatères $ABCD$ et $IJKL$, et le
+      segment $AC$.
+    \item Le but de cette question est de prouver que $\vecteur{IJ}=\frac{1}{2}\vecteur{AC}$.
+      \begin{enumerate}[(i)]
+        \item Justifier que $\vecteur{IJ} = \vecteur{IB}+\vecteur{BJ}$.
+        \item Justifier que $\vecteur{IB}=\vecteur{AI}$ et $\vecteur{BJ}=\vecteur{JC}$.
+        \item En déduire que $\vecteur{AI}+\vecteur{JC}=\vecteur{IJ}$.
+        \item Justifier que $\vecteur{AC}=\vecteur{AI}+\vecteur{IJ}+\vecteur{JC}$.
+        \item En déduire que $\vecteur{IJ}=\frac{1}{2}\vecteur{AC}$.
+      \end{enumerate}
+    \item En utilisant le même raisonnement, montrer que $\vecteur{LK}=\frac{1}{2}\vecteur{AC}$.
+    \item En déduire la nature du quadrilatère $IJKL$.
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Bonus]
+  Citer un mathématicien, et dire pourquoi il est connu.
+
+  \begin{em}
+    \noindent
+    Barème : 0,5 point pour la justesse de la réponse, plus 0,5 point pour
+    l'originalité (si aucun autre élève n'a donné la même réponse).
+  \end{em}
+\end{exercice}
+
+\end{document}

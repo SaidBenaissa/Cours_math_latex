@@ -1,0 +1,34 @@
+\documentclass[12pt, aspectratio=43]{beamer}
+
+\usepackage{pablo-beamer}
+
+\begin{document}
+
+\setcounter{section}{1}
+\section{Somme de deux vecteurs}
+
+\begin{frame}~
+
+  \begin{center}
+\tikzstyle{point}=[draw, shape=circle, fill=black, inner sep=0pt, minimum size=5pt]
+\begin{tikzpicture}[scale=0.8,very thick]
+  \draw[dotted,color=gray,step=1] (0,0) grid (13,5);
+  \draw (1,1) -- (3,3) -- (6,3) -- (4,1) -- (1, 1);
+  \node[left] at (1,1) {$A$};
+  \node[above left] at (3,3) {$B$};
+  \node[above] at (6,3) {$C$};
+  \node[below] at (4,1) {$D$};
+  \node[below left] at (7,2) {$E$};
+  \node[point] at (7,2) {};
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[(a)]
+  \item Placer le point $F$ tel que $\vecteur{EF}=\vecteur{AB}$.
+  \item Placer le point $G$ tel que $\vecteur{FG}=\vecteur{BC}$.
+  \item Placer le point $H$ tel que $\vecteur{EH}=\vecteur{AC}$.
+  \item Que remarquez-vous ? Comment traduire cela par une égalité de vecteurs ?
+\end{enumerate}
+\end{frame}
+
+\end{document}

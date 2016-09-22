@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+
+\usepackage{pablo}
+\usepackage{pablo-listings}
+
+\usepackage[a5paper,margin=1.4cm]{geometry}
+\usepackage{wrapfig}
+\usepackage[lists=normal]{savetrees}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+  \textsc{DM --- Systèmes et Droites}
+
+  {
+    \Large
+    Partage de clé secrète de Shamir
+    \hrule
+  }
+\end{center}
+
+\begin{em}
+  À rendre le 31 janvier
+\end{em}
+
+\begin{question}[Interpolation polynômiale]~
+  \begin{enumerate}[(a)]
+    \item Soient deux points $(3; 15)$, $(1; 7)$. Trouver l'équation d'une
+      droite passant par ces deux points.  Existe-t-il d'autres droites
+      passant aussi par ces points ?
+    \item Soit le point $(3; 15)$. Trouver les équations d'au moins deux
+      droites passant par ce points.
+  \end{enumerate}
+\end{question}
+
+\begin{wrapfigure}[8]{r}{3.5cm}
+  \tikzstyle{point}=[draw, shape=circle, fill=red, inner sep=0pt, minimum size=5pt]
+  \begin{tikzpicture}[domain=-3.8:4.2, minimum size=0.1pt, xscale=0.3, yscale=0.2]
+    \draw[color=blue] plot (\x,{2*\x + 5});
+    \draw[->] (-4.5,0) -- (4.5,0);
+    \draw[->] (0,-2.5) -- (0,14);
+
+    \node[point] at (-1, 3) {};
+    \draw(-1, 3) node[above left] {$R$};
+    \node[point] at (-2, 1) {};
+    \draw(-2,  1) node[above left] {$S$};
+    \node[point] at (1.5, 8) {};
+    \draw(1.5,  8) node[below right] {$V$};
+    \node[point] at (2, 9) {};
+    \draw(2,  9) node[right] {$A$};
+  \end{tikzpicture}
+\end{wrapfigure}~
+
+\begin{question}[Application pratique]
+  \label{ssss}
+  Quatre amis Alex, Sara, Volodia et Robin veulent stocker leur confiseries chez l'un d'entre eux. Mais leur petit frère est au courant et voudrait se servir. Pour s'en protéger, ils stockent leur marchandise dans une boîte verrouillée avec un
+  cadenas à code à deux chiffres. Ils se font confiance, mais le petit frère est malin, et ils se disent qu'il pourrait bien obtenir le code de l'un d'entre eux par fourberie.
+  Pour se protéger de cette situation, ils se
+  partagent le secret de la manière suivante.
+
+  Ils décident d'un code à deux chiffres $ab$ pour le cadenas. Ils
+  considèrent ensuite la droite d'équation $y=ax+b$, et chacun se voit
+  attribuer un point sur cette droite, connu de lui seul.
+
+  \begin{enumerate}[(a)]
+    \item Un jour, Alex et Sara veulent manger des bonbons présents dans la boîte. Retrouver le code du cadenas à
+      partir de leurs points respectifs $A(3; 15)$, $S(1;7)$.
+    \item Le petit frère trouve le papier sur lequel Alex avait écrit son point, par peur de l'oublier. Montrer qu'à partir de ce seul point $A(3 ; 15)$ le petit frère
+      ne peut pas retrouver l'équation de la droite originale, et donc le
+      code de la boîte.
+  \end{enumerate}
+\end{question}
+
+\begin{question}[Cassage de code]
+  Nos quatre compères n'ont pas inventé cette méthode : ils se sont inspirés du
+  \emph{partage de clef secrète de Shamir}, présentée par Shamir en 1979.
+  C'est une méthode sûre et robuste, réellement utilisée en pratique.
+  Malheureusement, la simplification qu'ils en ont faite pour pouvoir
+  l'utiliser facilement a introduit (au moins) une grosse faille.
+
+  Le petit frère raconte un jour son histoire à ses cousins Alan et Émilie.
+  Intéressés par les bonbons, ils vont utiliser chacun une méthode
+  différente pour trouver le code de la boîte et voler le butin, à partir de l'information à priori insuffisante $A(3;15)$.
+
+  \emph{Les questions (a) et (b) sont indépendantes}
+  \begin{enumerate}[(a)]
+    \item Émilie va essayer de trouver le
+      code par un raisonnement mathématique. Elle
+      recherche une droite d'équation $y=ax+b$ passant par le
+      point d'Alex.
+      \begin{enumerate}[(i)]
+        \item Vérifier que $b=15-3a$.
+        \item Quelles sont les valeurs possibles de $a$ ?
+        \item Faire une table de toutes les valeurs possibles
+          de $a$, et des valeurs de $b$ correspondantes.
+        \item En déduire les codes possibles. Émilie
+          va-t-elle réussir à ouvrir le cadenas ?
+      \end{enumerate}
+    \item Alan, lui, est passionné d'informatique. Il se dit que pour trouver
+      le code, il lui suffit d'énumérer toutes les équations de droites
+      possibles, et de ne conserver que ceux qui passent par le point d'Alex.
+      \begin{enumerate}[(i)]
+        \item Alan a commencé l'algorithme suivant.
+      \begin{lstlisting}[language=naturel,frame=lines,mathescape=true]
+      Pour a allant de 0 jusqu'a 10
+      Faire
+        Pour b allant de 0 jusqu'a 10
+        Faire
+          COMPLETER ICI :
+          VERIFIEZ SI y=ax-b EST LA
+          DROITE RECHERCHEE
+        FinPour
+      FinPour
+      \end{lstlisting}
+      Pour le moment, deux boucles permettent d'énumérer tous les codes
+      possibles. Il ne reste plus qu'à compléter l'algorithme pour vérifier
+      si un code donné est possible. Complétez cet algorithme.
+        \item Écrire le programme correspondant dans le langage de votre
+          choix (sur calculatrice par exemple), et l'exécuter.
+        \item Quels sont les résultats ? Alan va-t-il arriver à ses fins ?
+      \end{enumerate}
+    \item Comparer et commenter les méthodes de Émilie et Alan.
+  \end{enumerate}
+\end{question}
+
+\end{document}

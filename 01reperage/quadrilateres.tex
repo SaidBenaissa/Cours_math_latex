@@ -1,0 +1,62 @@
+\documentclass[twocolumn,12pt]{article}
+
+\usepackage{pablo}
+\usepackage[landscape,a5paper,margin=1cm]{geometry}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{propriete}[Losange]
+  Les propositions suivantes sont équivalentes.
+  \begin{enumerate}[(a)]
+    \item $ABCD$ est un losange.
+    \item $ABCD$ est un parallélogramme dont les diagonales sont perpendiculaires.
+    \item $ABCD$ est un parallélogramme ayant deux côtés consécutifs de même longueur.
+    \item $ABCD$ est un quadrilatère ayant quatre côtés de même longueur.
+  \end{enumerate}
+\end{propriete}
+
+\begin{propriete}[Rectangle]
+  Les propositions suivantes sont équivalentes.
+  \begin{enumerate}[(a)]
+    \item $ABCD$ est un rectangle.
+    \item $ABCD$ est un parallélogramme ayant un angle droit.
+    \item $ABCD$ est un parallélogramme dont les diagonales sont de même longueur.
+    \item $ABCD$ est un quadrilatère ayant quatre angles droits.
+  \end{enumerate}
+\end{propriete}
+
+\begin{definition}[Carré]
+  Un quadrilatère qui est à la fois un losange et un rectangle est appelé un \emph{carré}.
+\end{definition}
+
+\begin{center}
+  \begin{tikzpicture}[ultra thick,scale=2.3]
+        \tikzstyle{propriete} = []
+        \tikzstyle{fleche} = [-latex,thick,shorten >=15pt,shorten <=15pt]
+
+  \draw (0,0) node(quadri){Quadrilatère};
+  \draw ($(quadri.north east) + (0,.3)$) -- ($(quadri.north west)+(.1,0)$) -- ($(quadri.south west)+(-.3,-.1)$) -- ($(quadri.south east)+(.1,0)$) -- cycle;
+
+  \draw (0,-1.5) node(para){Parallélogramme};
+  \draw ($(para.north east) + (0,.2)$) -- ($(para.north west)+(-.4,0)$) -- ($(para.south west)+(0,-.2)$) -- ($(para.south east)+(.4,0)$) -- cycle;
+
+  \draw(-1,-3) node(rectangle){Rectangle};
+  \draw (rectangle.north east) -- (rectangle.north west) -- (rectangle.south west) -- (rectangle.south east) -- cycle;
+
+  \draw(1,-3) node(losange){Losange};
+  \draw ($(losange.north)+(0,.1)$) -- ($(losange.west)+(-.3,0)$) -- ($(losange.south)+(0,-.1)$) -- ($(losange.east)+(.3,0)$) -- cycle;
+
+  \draw(0,-4.5) node(carre){Carré};
+  \draw ($(carre)+(.25,.25)$) -- ($(carre)+(-.25,.25)$) -- ($(carre)+(-.25,-.25)$) -- ($(carre)+(.25,-.25)$) -- cycle;
+
+
+  \draw[fleche] (quadri) -- (para) node[midway,right,propriete]{\begin{tabular}{c}Côtés parallèles\\deux à deux\end{tabular}};
+  \draw[fleche] (para) -- (rectangle) node[midway,left,propriete]{Un angle droit};
+  \draw[fleche] (para) -- (losange) node[midway,right,propriete]{\begin{tabular}{c}Côtés consécutifs\\de même longueur\end{tabular}};
+  \draw[fleche] (losange) -- (carre);
+  \draw[fleche] (rectangle) -- (carre);
+\end{tikzpicture}
+\end{center}
+
+\end{document}

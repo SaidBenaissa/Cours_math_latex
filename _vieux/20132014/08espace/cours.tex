@@ -1,0 +1,209 @@
+\chapter{Géométrie dans l'espace}
+\section{Perspective cavalière}
+
+\begin{desc}
+  La représentation d'un solide en \emph{perspective cavalière} respecte les règles suivantes :
+  \begin{description}
+    \item[Droites]~
+      \begin{itemize}
+        \item une droite de l'espace est représentée par une droite ;
+        \item deux droites parallèles sont représentées par deux droites parallèles ;
+        \item deux droites sécantes sont représentées par deux droites sécantes ;
+        \item une droite visible est représentée en traits pleins, et une droite invisible en pointillés ;
+      \end{itemize}
+    \item[Longueurs]~
+      \begin{itemize}
+        \item les dimensions des objets qui sont dans des plans parallèles au plan de projection sont représentées en vraies grandeurs ;
+        \item les rapports des longueurs sur une même droite sont conservés (ainsi, le milieu d'un segment de l'espace apparait comme le milieu de la représentation du segment) ;
+      \end{itemize}
+    \item[Fuyantes]~
+      \begin{itemize}
+        \item l'angle $\alpha$ des fuyantes vaut habituellement 30\up{o}, 45\up{o} ou 60\up{o} ;
+        \item les dimensions portées par des fuyantes sont multipliées par un coefficient de réduction (généralement compris entre 0,5 et 0,8).
+      \end{itemize}
+  \end{description}
+\end{desc}
+
+\begin{remarque}
+  Les propriétés ci-dessus sont des implications : la réciproque n'est en général pas vraie. Par exemple, deux droites qui se coupent en perspective cavalière ne se coupent pas nécessairement dans l'espace.
+\end{remarque}
+
+
+
+\section{Solides usuels}
+
+\subsection{Famille des prismes droits}
+
+\begin{desc}~
+  \begin{itemize}
+    \item Toutes les faces d'un \emph{prisme droit} sont des rectangles, sauf éventuellement les deux bases.
+    \item Le \emph{parallélépipède rectangle} est un prisme droit donc les bases sont des rectangles.
+    \item Le \emph{cube} est un parallélépipède rectangle dont les faces sont des carrés.
+    \item Un \emph{cylindre de révolution} peut être considéré comme un prisme droit dont les bases sont des disques.
+  \end{itemize}
+\end{desc}
+
+\begin{propriete}
+  Le volume d'un prisme droit est donné par la formule $V=\mathcal{A_B}\times h$, où $\mathcal{A_B}$ est l'aire de la base et $h$ la hauteur.
+
+  Cas particuliers :
+  \begin{description}
+    \item[Parallélépipède rectangle] $V=l\times L\times h$ (où $l$ et $L$ sont les longueurs et largeurs de la base).
+    \item[Cylindre de révolution] $V=\pi r^2h$ (où $r$ est le rayon de la base).
+    \item[Cube] $V=c^3$ (où $c$ est la longueur d'un côté).
+  \end{description}
+\end{propriete}
+
+\subsection{Famille des pyramides}
+
+\begin{desc}~
+  \begin{itemize}
+    \item Une \emph{pyramide} est constituée d'une base de forme quelconque, et d'un sommet. Des arêtes joingnent ce sommet à chacun des sommets de la base.
+    \item Un \emph{tétraèdre} est une pyramide à base triangulaire.
+    \item Un \emph{cône de révolution} peut être considéré comme une pyramide dont la base est un disque.
+  \end{itemize}
+\end{desc}
+
+\begin{propriete}
+  Le volume d'une pyramide est donné par la formule $V=\frac{1}{3}\mathcal{A_B}\times h$, où $\mathcal{A_B}$ est l'aire de la base et $h$ la hauteur.
+
+  Cas particuliers : le volume d'un cône de révolution est $V=\frac{1}{3}\pi r^2h$ (où $r$ est le rayon de la base).
+\end{propriete}
+
+\subsection{Sphère}
+
+\begin{propriete}Soit une sphère de rayon $r$.
+  \begin{itemize}
+    \item Son volume est donné par la formule $V=\frac{4}{3}\pi r^3$.
+    \item La surface est donné par la formule $V=4\pi r^2$.
+  \end{itemize}
+\end{propriete}
+
+\section{Droites et plans}
+
+\subsection{Caractérisation}
+
+\begin{propriete}~
+  \begin{itemize}
+    \item Par deux points distincts $A$ et $B$ de l'espace passe une unique droite, notée $(AB)$.
+    \item Par trois points $A$, $B$ $C$ non alignés de l'espace passe un unique plan, noté $(ABC)$.
+    \item Si un plan contient deux points $A$ et $B$ distincts, alors il contient tous les points de la droite $(AB)$.
+    \item Dans tout plan de l'espace, on peut appliquer les théorèmes de géométrie plane (Pythagore, Thalès, etc.).
+  \end{itemize}
+\end{propriete}
+
+\begin{definition}~
+  \begin{itemize}
+    \item Deux droites sont dites \emph{coplanaires} s'il existe un plan qui les contient toutes les deux.
+    \item Quatre points sont dits \emph{coplanaires} s'il existe un plan qui les contient tous.
+  \end{itemize}
+\end{definition}
+
+\begin{propriete}
+  Un plan peut être caractérisé par :
+  \begin{itemize}
+    \item trois points deux à deux distincts ;
+    \item une droite et un point n'appartenant pas à cette droite ;
+    \item deux droites sécantes ;
+    \item deux droites strictement parallèles.
+  \end{itemize}
+\end{propriete}
+
+\subsection{Positions relatives}
+
+\begin{propriete}[Position relative de deux droites]
+  \emph{TODO : Présenter en tableau}
+  Deux droites peuvent êtres :
+  \begin{itemize}
+    \item coplanaires, auquel cas elles peuvent être :
+      \begin{itemize}
+        \item sécantes ;
+        \item parallèles, auquel cas elles peuvent être :
+          \begin{itemize}
+            \item stricetement parallèles ;
+            \item confondues ;
+          \end{itemize}
+      \end{itemize}
+    \item non coplanaires.
+  \end{itemize}
+\end{propriete}
+
+\begin{remarque}
+  Deux droites non sécantes ne sont pas nécessairement parallèles.
+\end{remarque}
+
+\begin{propriete}[Position relative d'une droite et d'un plan]
+  \emph{TODO : Présenter en tableau}
+  Une droite et un plan peuvent être :
+  \begin{itemize}
+    \item sécants ;
+    \item parallèles. Deux cas sont alors possibles :
+      \begin{itemize}
+        \item ils sont strictement parallèles (sans point commun) ;
+        \item la droite est incluse dans le plan.
+      \end{itemize}
+  \end{itemize}
+\end{propriete}
+
+
+\begin{propriete}[Position relative de deux plans]
+  \emph{TODO : Présenter en tableau}
+  Deux plans peuvent être :
+  \begin{itemize}
+    \item sécants ;
+    \item parallèles, auquel cas ils peuvent être :
+      \begin{itemize}
+        \item strictement parallèles (sans points communs) ;
+        \item confondus.
+      \end{itemize}
+  \end{itemize}
+\end{propriete}
+
+\begin{exemple}
+  \emph{TODO : Avec un cube.}
+\end{exemple}
+\section{Parallélisme}
+
+\subsection{Droites et plans}
+
+\begin{propriete}
+  Si deux droites sont parallèles, toute droite parallèle à l'une est parallèle à l'autre.
+\end{propriete}
+
+\begin{propriete}
+  Si deux droites sont parallèles, tout plan sécant avec l'une est sécant avec l'autre.
+\end{propriete}
+
+\begin{propriete}
+  Une droite parallèle à une autre droite contenue dans un plan est parallèle à ce plan.
+\end{propriete}
+
+\begin{theoreme}[Théorème du toit]
+  Soient $\mathcal{P}_1$ et $\mathcal{P}_2$ deux plans, et $d_1$ et $d_2$ deux droites, tels que :
+  \begin{itemize}
+    \item $d_1$ et $d_2$ sont parallèles ;
+    \item $d_1$ est incluse dans $\mathcal{P}_1$ ;
+    \item $d_2$ est incluse dans $\mathcal{P}_2$ ;
+    \item $\mathcal{P}_1$ et $\mathcal{P}_2$ sont sécants selon une droite $\delta$.
+  \end{itemize}
+  Alors $d_1$ et $d_2$ sont parallèles à $\delta$.
+
+\end{theoreme}
+
+\subsection{Plans parallèles}
+
+\begin{propriete}
+  Si deux plans sont parallèles, tout plan sécant avec l'un est sécant avec
+  l'autre, et les droites d'intersection sont parallèles.
+\end{propriete}
+
+\begin{propriete}
+  Si deux plans sont parallèles, tout plan parallèle à l'un est parallèle à l'autre.
+\end{propriete}
+
+\begin{propriete}
+  Si un plan $\mathcal P$ contient deux droites sécantes et parallèles à un
+  plan $\mathcal P'$, alors les plans $\mathcal P$ et $\mathcal P'$ sont
+  parallèles.
+\end{propriete}
+

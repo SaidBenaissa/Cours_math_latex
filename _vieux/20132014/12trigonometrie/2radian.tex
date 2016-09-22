@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+
+
+\usepackage{pablo}
+\usepackage[a6paper,landscape,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{tabularx}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{activite}~
+\end{activite}
+  \begin{enumerate} \item Placer sur le cercle trigonométrique, les points $N$, $P$, $Q$ et $R$ tels que :
+        $\widehat{ION} = 45^\circ, \quad \widehat{IOP} = 180^\circ, \quad \widehat{IOQ} = 30^\circ, \quad \widehat{IOR} = 90^\circ.$ 
+      \item~
+
+        \begin{tabular}{m{7cm}m{3cm}}
+          Exprimer en fonction de $\pi$ la longueur des arcs : 
+          \begin{itemize}
+            \item[$\bullet$] $\wideparen{IN}$ \dotfill
+            \item[$\bullet$] $\wideparen{IP}$ \dotfill 
+            \item[$\bullet$] $\wideparen{IQ}$ \dotfill
+            \item[$\bullet$] $\wideparen{IR}$ \dotfill 
+          \end{itemize}
+          &
+          \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=1.5]
+            \shorthandoff{:}
+            \clip(-1.34,-1.12) rectangle (1.62,1.21);
+            % \fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (0,0) -- (1,0) -- (0.5,0.87) -- cycle;
+            \draw(0,0) circle (1cm);
+            \draw [domain=-1.34:1.62] plot(\x,{(-0--0.71*\x)/0.71});
+            \draw [domain=-1.34:1.62] plot(\x,{(-0-0.71*\x)/0.71});
+            % \draw [color=zzttqq] (0,0)-- (1,0);
+            % \draw [color=zzttqq] (1,0)-- (0.5,0.87);
+            % \draw [color=zzttqq] (0.5,0.87)-- (0,0);
+            \draw (0,-1.12) -- (0,1.21);
+            \draw [domain=-1.34:1.32] plot(\x,{(-0-0*\x)/-1});
+            % \begin{scriptsize}
+            \fill [color=black] (1,0) circle (0.5pt);
+            \draw[color=black] (1.2,0.15) node {$I$};
+            \fill [color=black] (0,1) circle (0.5pt);
+            \draw[color=black] (0.02,1.1) node {$J$};
+            \fill [color=black] (0,1) circle (0.5pt);
+            \draw[color=black] (-0.12,-0.15) node {$O$};
+            % \fill [color=black] (-1,0) circle (0.5pt);
+            % \draw[color=black] (-1.1,0.15) node {$I'$};
+            % \fill [color=black] (0,-1) circle (0.5pt);
+            % \draw[color=black] (0.13,-0.85) node {$J'$};
+            % \fill [color=black] (0.71,0.71) circle (0.5pt);
+            % \draw[color=black] (0.85,0.75) node {$A$};
+            % \fill [color=black] (-0.71,0.71) circle (0.5pt);
+            % \draw[color=black] (-0.97,0.75) node {$B$};
+            % \fill [color=black] (-0.71,-0.71) circle (1.0pt);
+            % \draw[color=black] (-0.97,-0.65) node {$C$};
+            % \fill [color=black] (0.71,-0.71) circle (0.5pt);
+            % \draw[color=black] (0.95,-0.76) node {$D$};
+            % \fill [color=black] (0.5,0.87) circle (0.5pt);
+            % \draw[color=black] (0.54,1.0) node {$E$};
+            % \fill [color=black] (1,0) circle (2.5pt);
+            % \end{scriptsize}
+          \end{tikzpicture}
+        \end{tabular}
+      \item Compléter la phrase suivante : \newline
+        La mesure en radian d'un angle géométrique est \makebox[3cm]{ \dotfill} à sa mesure en degré. 
+    \end{enumerate}
+
+    \end{document}
