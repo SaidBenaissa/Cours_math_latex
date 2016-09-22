@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2015 Louis Paternault --- http://paternault.fr
+%
+% Ces fichiers sont publiées sous les licences suivantes, au choix :
+% 
+% * LaTeX Project Public License [lppl], version 1.3c ou supérieure ;
+% * Do What The Fuck You Want To Public License (wtfpl) ou sa traduction française la Licence Publique Rien À Branler [lprab] ;
+% * CC0 1.0 universel [cc0]
+% * versé dans le domaine public, dans les législations qui le permettent (ce qui n'est pas le cas de la France).
+%
+% [lppl] http://latex-project.org/lppl/
+% [wtfpl] http://www.wtfpl.net
+% [lprab] ttp://sam.zoy.org/lprab
+% [cc0] https://creativecommons.org/publicdomain/zero/1.0/deed.fr
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{listings}
+\usepackage{lstautogobble}
+
+\lstset{
+    autogobble=true,
+    showstringspaces=false,
+}
+
+\lstdefinelanguage{TI}{
+  morekeywords={Prompt, ->, While, End, If, Then, Else, Disp, ent, NbrAleat},
+  showstringspaces=false,
+  sensitive=true,
+  morestring=[b]",
+  literate={->}{{$\rightarrow$}}1 {neq}{$\neq$}1 {*}{$\times$}1,
+}
+
+\lstdefinelanguage{casio}{
+  morekeywords={Int, ->, Ran\#, While, WhileEnd, If, Then, Else, IfEnd, ?},
+  showstringspaces=false,
+  sensitive=true,
+  morestring=[b]",
+  literate={->}{{$\rightarrow$}}1 {neq}{$\neq$}1 {*}{$\times$}1,
+}
+
+\lstdefinelanguage{naturel}{
+  morekeywords={Lire, Afficher,Si,Sinon,FinSi,Alors,ou,et, Tant_que, Faire, FinTantque, Pour, allant, FinPour},
+  showstringspaces=false,
+  sensitive=true,
+  morestring=[b]",
+  literate={FOR}{{\textbf{Pour}}}4 {FROM}{{\textbf{allant de}}}7 {TO}{{\textbf{\`a}}}1 {<-}{{\textbf{prend la valeur}}}{14} {->}{{$\rightarrow$ }}2 {*}{{$\times$}}1 {/}{{$\div$}}1,
+}

@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2015 Louis Paternault --- http://paternault.fr
+%
+% Ces fichiers sont publiées sous les licences suivantes, au choix :
+% 
+% * LaTeX Project Public License [lppl], version 1.3c ou supérieure ;
+% * Do What The Fuck You Want To Public License (wtfpl) ou sa traduction française la Licence Publique Rien À Branler [lprab] ;
+% * CC0 1.0 universel [cc0]
+% * versé dans le domaine public, dans les législations qui le permettent (ce qui n'est pas le cas de la France).
+%
+% [lppl] http://latex-project.org/lppl/
+% [wtfpl] http://www.wtfpl.net
+% [lprab] ttp://sam.zoy.org/lprab
+% [cc0] https://creativecommons.org/publicdomain/zero/1.0/deed.fr
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\@ifpackageloaded{xcolor}{
+  % Déjà chargé
+}{
+  \usepackage[usenames,dvipsnames,table]{xcolor}
+}
+
+\@ifclassloaded{article}{
+  \pagestyle{empty}
+}{
+  %
+}
+\makeatother
+
+\usepackage{textcomp}
+\usepackage{fontspec}
+\usepackage[frenchb]{babel}
+\usepackage{lmodern}
+\usepackage{tkz-tab}
+\usepackage{multicol}
+\usepackage{eurosym}
+\usepackage{calc}
+\usepackage{numprint}
+\usepackage[]{hyperref}
+\hypersetup{
+  unicode=true,           % non-Latin characters in Acrobat’s bookmarks
+  pdfauthor={Louis Paternault},     % author
+  hidelinks=true,
+  urlcolor=cyan           % color of external links
+}
+
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yhmath}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations}
+\usepackage{pgfplots}
+
+\usepackage{enumerate}
+\makeatletter
+\@ifclassloaded{beamer}
+{}
+{
+  \usepackage{paralist}
+}
+\makeatother
+
+% Commandes
+\newcommand{\vecteur}[1]{\overrightarrow{#1}}
+\newcommand{\evenement}[2]{\ensuremath{#1=} «~#2~»}
+\newcommand{\coord}[2]{\binom{#1}{#2}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\systeme}[2]{\left\{\begin{array}{l}#1\\#2\end{array}\right.}
+\newcommand{\norme}[1]{\left|\left|#1\right|\right|}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Environnements théorèmes, etc.
+\theoremstyle{definition}
+
+\ifdefined\definition
+\else
+  \newtheorem*{definition}{Définition}
+\fi
+
+\newtheorem*{desc}{Description}
+\newtheorem*{propriete}{Propriété}
+\newtheorem*{defprop}{Définition et Propriété}
+\newtheorem*{theoreme}{Théorème}
+\newtheorem*{activite}{Activité}
+\newtheorem*{remarque}{Remarque}
+\newtheorem*{exemple}{Exemple}
+\newtheorem*{corollaire}{Corollaire}
+\newtheorem*{methode}{Méthode}
+\newtheorem*{oral}{Oral}
+\newtheorem{exercice}{Exercice}
+\newtheorem{question}{Question}
+
+\newenvironment{demo}{\noindent\textbf{Démonstration}.}{\par\hfill$\square$}
+
+% Compléter les trous
+\usepackage[dot]{dashundergaps}
+\newcommand{\blanc}[1]{\dotuline{\textcolor{white}{\Large #1}}}
+
+% Degré
+\newcommand{\degree}{\ensuremath{^\circ}\xspace}
+\DeclareMathOperator{\rad}{rad}
+
+% Unités
+\usepackage{siunitx}
+\sisetup{locale = FR,
+  detect-all,
+  group-minimum-digits=4,
+}
+
+% Calculatrice
+\newcommand{\touche}[1]{\framebox{\texttt{#1}}}

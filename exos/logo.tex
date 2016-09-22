@@ -1,0 +1,27 @@
+\documentclass[border=1pt]{standalone}
+
+% Rustine temporaire (?) car standalone ne fonctionne plus avec lualatex
+\usepackage{luatex85}
+
+\makeatletter
+% Adapté des définitions originales de \LaTeX et \TeX
+\DeclareRobustCommand{\PaBlO}{%
+  P\kern-.22em%
+  {\sbox\z@ T%
+    \vbox to\ht\z@{\hbox{%
+      \check@mathfonts
+      \fontsize\sf@size\z@
+      \math@fontsfalse\selectfont A}%
+    \vss}%
+  }%
+  \kern-.15em%
+  {\rm B\kern-.1667em\lower.7ex\hbox{L}\kern-.29emO}
+}
+\makeatother
+
+
+\begin{document}
+
+\PaBlO
+
+\end{document}
